@@ -1,53 +1,39 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
+  <main>
+    <section class='box-left'>
+      A
+    </section>
+    <section class='box-right'>
+      <h1>Welcome to GLIISCEN.</h1>
 
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
   name: 'HomePage',
-
-  components: {
-    Card
-  }
+  components: {}
 }
 </script>
+
+<style scoped lang='scss'>
+@import 'assets/scss/globals';
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+section.box-left {
+  flex: 0.4;
+  background-color: $white;
+}
+
+section.box-right {
+  flex: 0.6;
+  height: 100vh;
+  background: linear-gradient($primary, $primary-lighter);
+}
+</style>
