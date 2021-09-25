@@ -1,0 +1,21 @@
+@import 'palette';
+
+.primary-button {
+  background: linear-gradient(to right, $primary, $primary);
+  color: $white;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+  padding: 12px 5px;
+}
+
+.primary-button:hover {
+  background: linear-gradient(to right, #299ffa, #299ffa);
+}
+
+.space-hz-sm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
