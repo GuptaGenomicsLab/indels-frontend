@@ -23,7 +23,7 @@
         <b-checkbox v-model='formData.rememberMe' type='is-info'>Remember Me</b-checkbox>
         <NuxtLink to='/forgot-password'>Forgot Password?</NuxtLink>
       </footer>
-      <button class='primary-button space-hz-sm' type='submit'>Login</button>
+      <button id='login-button' class='primary-button space-hz-sm' type='submit'>Login</button>
 <!--    <button class='secondary-button extended'>Sign Up</button>-->
     </form>
   </div>
@@ -32,24 +32,25 @@
 <script>
 import { reactive } from '@nuxtjs/composition-api'
 import DnaIcon from '@/components/DnaIcon'
+import { useAuth } from '@/scripts/useAuth'
 
 export default {
   name: 'LoginForm',
   components: { DnaIcon },
   setup() {
+    const auth = useAuth();
+
     const formData = reactive({
       username: '',
       password: '',
       rememberMe: true
     });
 
+    const submit = () => auth.loginWith('cookie', {data: formData});
+
     return {
+      submit,
       formData
-    }
-  },
-  methods: {
-    submit() {
-      this.$auth.loginWith('cookie', {data: this.formData});
     }
   }
 }
@@ -58,7 +59,7 @@ export default {
 <style scoped lang='scss'>
 @import '~assets/scss/globals.scss';
 
-#login-box {
+form {
   header {
     display: flex;
     flex-direction: column;

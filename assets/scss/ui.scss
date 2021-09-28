@@ -1,4 +1,16 @@
 @import 'palette';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,700&display=swap');
+
+h2 {
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 48px;
+}
+
+.black {
+  color: black;
+}
 
 .primary-button {
   background: linear-gradient(to right, $primary, $primary);
