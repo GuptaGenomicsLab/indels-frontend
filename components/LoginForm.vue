@@ -2,8 +2,8 @@
   <div id='login-box'>
     <form @submit.prevent='submit'>
       <header>
-        <DnaIcon size='lg' squiggle />
-        <h2>Sign In</h2>
+        <DnaIcon size='lg' animated />
+        <h2 class='black'>Sign In</h2>
       </header>
       <b-field>
         <b-input placeholder='Username'

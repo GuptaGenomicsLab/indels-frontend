@@ -8,7 +8,7 @@ import { Sizes } from '~/scripts/size.type'
 
 type IconProps = {
   size: Sizes,
-  squiggle?: boolean
+  animated?: boolean
 };
 
 export default {
@@ -18,19 +18,20 @@ export default {
       type: String,
       default: 'md'
     },
-    squiggle: {
-      // note: squiggle is not reactive since destructuring props in setup({squiggle}) removes reactivity
+    animated: {
+      // note: animated is not reactive since destructuring props in setup({animated}) removes reactivity
       type: Boolean,
       default: false
     }
   },
-  setup({squiggle}: IconProps) {
+  setup({animated}: IconProps) {
+    let cnt = 1;
     const animateSquiggle = () => {
-      if (!squiggle) return;
+      if (!animated) return;
       animate(
         '.logo',
-        {rotate: 15},
-        {duration: 0.1, easing: 'ease-in-out', repeat: 3, direction: 'alternate'}
+        {rotate: (180 * cnt++)},
+        {duration: 0.5, easing: 'ease-in-out'}
       )
     }
 
@@ -58,3 +59,4 @@ export default {
 //  margin: auto;
 //}
 </style>
+
