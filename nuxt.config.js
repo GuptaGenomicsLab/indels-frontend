@@ -1,3 +1,4 @@
+const ENV_DEVELOPMENT = true;
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -29,8 +30,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -50,12 +50,42 @@ export default {
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: ENV_DEVELOPMENT ? 'http://localhost:3001' : 'https://api.indels.com',
+    credentials: true
+  },
+
+  auth: {
+    redirect: {
+      login: '/',
+      logout: '/',
+      home: '/home',
+      callback: '/home'
+    },
+    strategies: {
+      local: false,
+      cookie: {
+        cookie: {
+          prefix: '',
+          name: 'indels.com/session.id'
+        },
+        user: {
+          autoFetch: true,
+          property: false
+        },
+        endpoints: {
+          login: { method: 'POST', url: '/auth/login' },
+          logout: { method: 'POST', url: '/auth/logout' },
+          user: { method: 'GET', url: '/user' }
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {}
 }

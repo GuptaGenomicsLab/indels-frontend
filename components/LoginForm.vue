@@ -1,29 +1,31 @@
 <template>
   <div id='login-box'>
-    <header>
-      <DnaIcon size='lg' squiggle />
-      <h2>Sign In</h2>
-    </header>
-    <b-field>
-      <b-input placeholder='Username'
-               v-model='formData.email'
-               icon='account'
-      />
-    </b-field>
-    <b-field>
-      <b-input placeholder='Password'
-               type='password'
-               v-model='formData.password'
-               icon='lock'
-               password-reveal
-      />
-    </b-field>
-    <footer>
-      <b-checkbox v-model='formData.rememberMe' type='is-info'>Remember Me</b-checkbox>
-      <NuxtLink to='/forgot-password'>Forgot Password?</NuxtLink>
-    </footer>
-    <button class='primary-button space-hz-sm'>Login</button>
+    <form @submit.prevent='submit'>
+      <header>
+        <DnaIcon size='lg' squiggle />
+        <h2>Sign In</h2>
+      </header>
+      <b-field>
+        <b-input placeholder='Username'
+                 v-model='formData.username'
+                 icon='account'
+        />
+      </b-field>
+      <b-field>
+        <b-input placeholder='Password'
+                 type='password'
+                 v-model='formData.password'
+                 icon='lock'
+                 password-reveal
+        />
+      </b-field>
+      <footer>
+        <b-checkbox v-model='formData.rememberMe' type='is-info'>Remember Me</b-checkbox>
+        <NuxtLink to='/forgot-password'>Forgot Password?</NuxtLink>
+      </footer>
+      <button class='primary-button space-hz-sm' type='submit'>Login</button>
 <!--    <button class='secondary-button extended'>Sign Up</button>-->
+    </form>
   </div>
 </template>
 
@@ -36,13 +38,18 @@ export default {
   components: { DnaIcon },
   setup() {
     const formData = reactive({
-      email: '',
+      username: '',
       password: '',
       rememberMe: true
-    })
+    });
 
     return {
       formData
+    }
+  },
+  methods: {
+    submit() {
+      this.$auth.loginWith('cookie', {data: this.formData});
     }
   }
 }

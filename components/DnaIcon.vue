@@ -19,6 +19,7 @@ export default {
       default: 'md'
     },
     squiggle: {
+      // note: squiggle is not reactive since destructuring props in setup({squiggle}) removes reactivity
       type: Boolean,
       default: false
     }

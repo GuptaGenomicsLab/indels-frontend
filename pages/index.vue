@@ -13,8 +13,11 @@
 <script>
 import LoginForm from '@/components/LoginForm'
 export default {
-  name: 'HomePage',
-  components: { LoginForm }
+  name: 'RootPage',
+  components: { LoginForm },
+  setup() {
+
+  }
 }
 </script>
 
