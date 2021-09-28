@@ -1,5 +1,5 @@
 <template>
-  <img :class='`logo size-${size}`' src='~/assets/img/dna-circular.png'  alt='Logo' @mouseenter='animateSquiggle'/>
+  <img :id='id' :class='`logo size-${size}`' src='~/assets/img/dna-circular.png'  alt='Logo' @mouseenter='animateSquiggle'/>
 </template>
 
 <script lang='ts'>
@@ -8,7 +8,8 @@ import { Sizes } from '~/scripts/size.type'
 
 type IconProps = {
   size: Sizes,
-  animated?: boolean
+  animated?: boolean,
+  id?: string
 };
 
 export default {
@@ -22,6 +23,10 @@ export default {
       // note: animated is not reactive since destructuring props in setup({animated}) removes reactivity
       type: Boolean,
       default: false
+    },
+    id: {
+      type: String,
+      default: 'logo-default-id'
     }
   },
   setup({animated}: IconProps) {
@@ -44,7 +49,7 @@ export default {
 
 <style scoped lang='scss'>
 .size-sm {
-  width: 1%;
+  width: 10%;
 }
 
 .size-md {

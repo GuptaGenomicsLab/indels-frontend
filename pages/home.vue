@@ -9,6 +9,7 @@
 <script lang='ts'>
 export default {
   name: 'HomePage',
+  layout: 'authenticated',
   computed: {
     info(): any {
       return {
