@@ -32,7 +32,7 @@
 <script>
 import { reactive } from '@nuxtjs/composition-api'
 import DnaIcon from '@/components/DnaIcon'
-import { useAuth } from '@/scripts/useAuth'
+import { useAuth } from '@/scripts/useHooks'
 
 export default {
   name: 'LoginForm',
