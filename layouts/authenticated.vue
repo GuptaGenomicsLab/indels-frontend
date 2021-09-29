@@ -80,13 +80,15 @@ nav {
   }
 
   h2 {
-    @include respond-below(sm) {
-      visibility: hidden;
-    }
-
     font-family: Montserrat, Arial, sans-serif;
     font-weight: lighter;
     margin: 0 10px 0 5px;
+
+    @include respond-below(sm) {
+      visibility: hidden;
+      width: 0;
+      margin: 0;
+    }
   }
 }
 
