@@ -1,6 +1,6 @@
 <template>
   <div id='global-container'>
-    <nav>
+    <nav class='navbar'>
       <div class='branding'>
         <DnaIcon size='none' animated />
         <h2>gliiscen</h2>
@@ -13,8 +13,19 @@
       </div>
       <div class='icons'>
         <b-icon icon='bell-outline' size='sm' />
-        <b-icon icon='cog-outline' size='sm' />
-        <img class='avatar' :src='avatarUrl' />
+        <img class='avatar' :src='avatarUrl' @click='activeDropdown = "account"'/>
+        <div class='dropdown-container'>
+          <div v-if='activeDropdown === "account"' id='account-dropdown' class='dropdown'>
+            <NuxtLink to='/settings'>
+              <b-icon icon='cog-outline' size='sm' />
+              Account Settings
+            </NuxtLink>
+            <NuxtLink to='/logout'>
+              <b-icon icon='logout' size='sm' />
+              Logout
+            </NuxtLink>
+          </div>
+        </div>
       </div>
     </nav>
     <Nuxt />
@@ -22,26 +33,34 @@
 </template>
 
 <script>
+import { ref } from '@nuxtjs/composition-api'
 import DnaIcon from '@/components/DnaIcon'
 
 export default {
   components: { DnaIcon },
+  setup() {
+    const activeDropdown = ref('s')
+
+    return {
+      activeDropdown
+    }
+  },
   computed: {
     avatarUrl() {
       const properties = {
         name: this.$auth.user.username,
         length: 1,
-        background: '0cb8fd',
+        background: '03B6FF',
         isRounded: true,
         caps: 1
-      };
-      return `https://avatar.oxro.io/avatar.svg?${new URLSearchParams(properties)}`;
+      }
+      return `https://avatar.oxro.io/avatar.svg?${new URLSearchParams(properties)}`
     }
   }
 }
 </script>
 
-<style lang='scss'>
+<style scoped lang='scss'>
 @import 'assets/scss/globals';
 
 * {
@@ -119,5 +138,20 @@ nav {
     padding: 0 15px;
     height: 60%;
   }
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: -100px;
+  overflow: visible;
 }
 </style>

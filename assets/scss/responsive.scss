@@ -3,7 +3,8 @@ $breakpoints: (
   sm: 768px,
   md: 992px,
   lg: 1250px,
-  xlg: 1400px
+  xlg: 1400px,
+  xxlg: 1600px
 );
 
 @function br($name) {

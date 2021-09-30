@@ -1,3 +1,4 @@
+@import 'responsive';
 @import 'palette';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
@@ -38,4 +39,34 @@ h2 {
 .space-hz-sm {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.content-box {
+  margin: 3vh auto;
+  @include respond-below(md) {
+    width: 90%;
+    height: 90%;
+  }
+  @include respond-above(md) {
+    width: map-get($breakpoints, md);
+    height: 80%;
+    border: 1px solid #C4C4C4;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+
+.content-box-lg {
+  margin: 3vh auto;
+  @include respond-below(xxlg) {
+    width: 95%;
+    height: 90%;
+  }
+  @include respond-above(xxlg) {
+    width: map-get($breakpoints, xxlg);
+    height: 90%;
+    border: 1px solid #C4C4C4;
+    padding: 15px;
+    border-radius: 5px;
+  }
 }

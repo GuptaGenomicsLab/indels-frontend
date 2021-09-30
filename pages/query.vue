@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class='content-box'>
     <h1>Identify a Genome</h1>
     <p id='identity-explanation'>
       Start a new query.
@@ -99,7 +99,7 @@ export default {
       formData.append('file', file.value)
 
       const queryID = await axios.$post('/blast/start-query', formData);
-      await router.push({path: `/result/${queryID}`});
+      await router.push({path: `/results/${queryID}`});
     }
 
     return {
@@ -115,21 +115,6 @@ export default {
 
 <style scoped lang='scss'>
 @import '~assets/scss/globals.scss';
-
-main {
-  margin: 3vh auto;
-  @include respond-below(md) {
-    width: 90%;
-    height: 90%;
-  }
-  @include respond-above(md) {
-    width: map-get($breakpoints, md);
-    height: 80%;
-    border: 1px solid #C4C4C4;
-    padding: 15px;
-    border-radius: 5px;
-  }
-}
 
 .upload-fill {
   display: flex;
