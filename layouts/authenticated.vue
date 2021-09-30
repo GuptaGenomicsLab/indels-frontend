@@ -13,19 +13,24 @@
       </div>
       <div class='icons'>
         <b-icon icon='bell-outline' size='sm' />
-        <img class='avatar' :src='avatarUrl' @click='activeDropdown = "account"'/>
-        <div class='dropdown-container'>
-          <div v-if='activeDropdown === "account"' id='account-dropdown' class='dropdown'>
+        <b-dropdown append-to-body position='is-bottom-left'>
+          <template id='avatar' v-slot:trigger>
+            <img class='avatar' :src='avatarUrl' @click='activeDropdown = "account"'/>
+          </template>
+
+          <b-dropdown-item custom>
             <NuxtLink to='/settings'>
-              <b-icon icon='cog-outline' size='sm' />
+              <b-icon icon='tune-variant' size='sm' />
               Account Settings
             </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item custom>
             <NuxtLink to='/logout'>
               <b-icon icon='logout' size='sm' />
               Logout
             </NuxtLink>
-          </div>
-        </div>
+          </b-dropdown-item>
+        </b-dropdown>
       </div>
     </nav>
     <Nuxt />
@@ -135,8 +140,8 @@ nav {
   align-items: center;
 
   .avatar {
-    padding: 0 15px;
-    height: 60%;
+    padding: 0 20px;
+    height: 5vh;
   }
 }
 
@@ -145,13 +150,4 @@ nav {
   display: inline-block;
 }
 
-.dropdown {
-  display: block;
-  position: absolute;
-  background-color: #f1f1f1;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-left: -100px;
-  overflow: visible;
-}
 </style>
