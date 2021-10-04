@@ -7,9 +7,9 @@
         <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
       </ul>
       <hr>
-      <section>
+      <figure>
         <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
-      </section>
+      </figure>
     </main>
 </template>
 

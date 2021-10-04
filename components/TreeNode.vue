@@ -3,29 +3,29 @@
     <b-collapse animation='fade' :open='false'>
       <template #trigger='props'>
         <div class='card-header' role='button'>
-          <span>{{node.taxonName}}</span> &nbsp;
-          <span v-if='node.specificHits.value.length > 0'>({{node.specificHits.value.length}})</span>
+          <span>{{ node.taxonName }}</span> &nbsp;
+          <span v-if='node.specificHits.value.length > 0'>({{ node.specificHits.value.length }})</span>
           <b-icon v-if='node.specificHits.value.length > 0' :icon="props.open ? 'menu-up' : 'menu-down'" />
         </div>
       </template>
 
       <div class='card-container'>
-        <div v-for='hit of node.specificHits.value' :key='hit.subject'>
+        <div v-for='hit of node.specificHits.value' :key='hit.subject' class='card-content'>
           <NuxtLink :to='`/csi/${hit.csi.id}`'>
             {{ hit.indelInfo.size }} aa insert
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </NuxtLink>
-          <br>
+          <br><br>
           Query: <code>{{ hit.query }}</code>
           <br>
           Subject: <code>{{ hit.subject }}</code>
-          <br>
+          <br><br>
           <!-- todo: switch to dynamic reference -->
           <i>Reference:</i> <span>Gupta RS et al (2013)</span>
         </div>
       </div>
     </b-collapse>
-    <TreeNode v-for='child of children' :key='child.taxonName' :tree='child' :clickable='false'/>
+    <TreeNode v-for='child of children' :key='child.taxonName' :tree='child' :clickable='false' />
   </div>
 </template>
 
@@ -61,7 +61,7 @@ export default {
   setup(props: TreeNodeProps) {
     const children = computed(
       () => Object.values(props.tree.children)
-        .filter((child: Node) => child.specificHits.length > 0 || Object.keys(child.children).length > 0)
+          .filter((child: Node) => child.specificHits.length > 0 || Object.keys(child.children).length > 0)
         ?? []
     )
 
@@ -75,6 +75,10 @@ export default {
 
     const open = props.clickable ? ref(false) : false
 
+    // const shortReference = (full: string): string => {
+    //
+    // }
+
     return {
       children,
       node,
@@ -85,17 +89,31 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import '~assets/scss/globals.scss';
+
 .node-container {
-  margin-left: 10px;
-  border: none;
+  margin: .75rem 0 0 1.5rem;
 }
 
 .card-header {
   width: fit-content;
   padding: .25rem 1rem;
+  font-family: Consolas, monospace;
+  border: 1px solid $primary;
 }
 
-.card {
-  border: none;
+.card-header:hover {
+  color: white;
+  background-color: $primary;
+}
+
+.card-content {
+  margin: 1% 0 0 10px;
+  border: 1px solid #8f969d;
+  border-radius: 2px;
+
+  code {
+    color: black;
+  }
 }
 </style>
