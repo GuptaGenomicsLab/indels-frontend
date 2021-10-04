@@ -29,6 +29,9 @@ main {
   flex-direction: row;
   padding: 0;
   margin: 0;
+  @include respond-below(md) {
+    flex-direction: column;
+  }
 }
 
 section.box-left {

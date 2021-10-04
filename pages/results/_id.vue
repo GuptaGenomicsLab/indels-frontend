@@ -2,16 +2,18 @@
     <main class='content-box'>
       <b-loading v-model='isLoading' :can-cancel='true' />
       <h1>Content</h1>
-      <p>{{ JSON.stringify(result.tree) }}</p>
+      <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
     </main>
 </template>
 
 <script>
 import { computed, reactive, ref, useFetch, useRoute } from '@nuxtjs/composition-api'
 import { useAxios } from '@/scripts/useHooks'
+import TreeNode from '@/components/TreeNode'
 
 export default {
   name: 'ResultPage',
+  components: { TreeNode },
   layout: 'authenticated',
   setup() {
     const route = useRoute()
@@ -53,7 +55,7 @@ export default {
       } else {
         result.header = query.data.fileName
         result.identified = query.data.identified
-        result.tree = query.data.tree
+        result.tree = JSON.parse(query.data.tree)
       }
     }
 
