@@ -12,10 +12,28 @@
         <NuxtLink to='/support'>Support</NuxtLink>
       </div>
       <div class='icons'>
-        <b-icon icon='bell-outline' size='sm' />
-        <b-dropdown append-to-body position='is-bottom-left'>
-          <template id='avatar' v-slot:trigger>
-            <img class='avatar' :src='avatarUrl' @click='activeDropdown = "account"'/>
+        <b-dropdown close-on-click append-to-body position='is-bottom-left'>
+          <template #trigger>
+            <b-icon v-if='$store.$auth.user.role === "ADMIN"'  icon='cog-outline' size='sm' />
+          </template>
+
+          <b-dropdown-item custom>
+            <NuxtLink to='/csi'>
+              <b-icon icon='dna' size='md' />
+              Manage CSIs
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/user'>
+              <b-icon icon='account-box-multiple' size='md' />
+              Manage Users
+            </NuxtLink>
+          </b-dropdown-item>
+        </b-dropdown>
+
+        <b-dropdown close-on-click append-to-body position='is-bottom-left'>
+          <template #trigger>
+            <img class='avatar' :src='avatarUrl'/>
           </template>
 
           <b-dropdown-item custom>
@@ -38,18 +56,10 @@
 </template>
 
 <script>
-import { ref } from '@nuxtjs/composition-api'
 import DnaIcon from '@/components/DnaIcon'
 
 export default {
   components: { DnaIcon },
-  setup() {
-    const activeDropdown = ref('s')
-
-    return {
-      activeDropdown
-    }
-  },
   computed: {
     avatarUrl() {
       const properties = {
