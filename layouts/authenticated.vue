@@ -37,7 +37,7 @@
           </template>
 
           <b-dropdown-item custom>
-            <NuxtLink to='/settings'>
+            <NuxtLink to='/preferences'>
               <b-icon icon='tune-variant' size='sm' />
               Account Settings
             </NuxtLink>
