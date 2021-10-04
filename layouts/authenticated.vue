@@ -36,17 +36,17 @@
             <img class='avatar' :src='avatarUrl'/>
           </template>
 
+<!--          <b-dropdown-item custom>-->
+<!--            <NuxtLink to='/preferences'>-->
+<!--              <b-icon icon='tune-variant' size='sm' />-->
+<!--              Account Settings-->
+<!--            </NuxtLink>-->
+<!--          </b-dropdown-item>-->
           <b-dropdown-item custom>
-            <NuxtLink to='/preferences'>
-              <b-icon icon='tune-variant' size='sm' />
-              Account Settings
-            </NuxtLink>
-          </b-dropdown-item>
-          <b-dropdown-item custom>
-            <NuxtLink to='/logout'>
+            <a @click='logout'>
               <b-icon icon='logout' size='sm' />
               Logout
-            </NuxtLink>
+            </a>
           </b-dropdown-item>
         </b-dropdown>
       </div>
@@ -71,6 +71,11 @@ export default {
         caps: 1
       }
       return `https://avatar.oxro.io/avatar.svg?${new URLSearchParams(properties)}`
+    }
+  },
+  methods: {
+    logout() {
+      this.$auth.logout();
     }
   }
 }

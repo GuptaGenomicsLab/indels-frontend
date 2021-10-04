@@ -1,7 +1,7 @@
 <template>
-  <main class='content-box-lg'>
+  <main :class='showDetails ? "content-box-lg" : "content-box"'>
     <header>
-      <h1> Your Queries </h1>
+      <h1> {{showDetails ? 'Your Queries' : 'Recent Queries'}} </h1>
       <b-input v-model='searchText' icon='magnify' placeholder='Search Queries'/>
     </header>
     <b-table
@@ -12,6 +12,7 @@
     >
     </b-table>
     <b-pagination
+      v-if='showDetails'
       v-model='activePage'
       :total='matchingRows'
       :range-before='2'
@@ -25,26 +26,35 @@
 import { ref, useFetch, useRouter, watch } from '@nuxtjs/composition-api'
 import { useAxios } from '@/scripts/useHooks'
 
-const columns = [
-  { field: 'fileName', label: 'File Name' },
-  { field: 'result', label: 'Result' },
-  { field: 'description', label: 'Description' },
-  { field: 'createdAt', label: 'Started' },
-  { field: 'updatedAt', label: 'Last Changed' }
-]
-
 export default {
   name: 'ResultsPage',
   layout: 'authenticated',
-  setup() {
+  props: {
+    showDetails: {
+      type: Boolean,
+      default: true
+    }
+  },
+  setup(props) {
     const axios = useAxios()
     const router = useRouter();
 
-    const PAGE_ROWS = 25
+    const PAGE_ROWS = props.showDetails ? 25 : 10
     const rows = ref([])
     const activePage = ref(1);
     const searchText = ref('');
     const matchingRows = ref(0);
+
+    const columns = [
+      { field: 'fileName', label: 'File Name' },
+      { field: 'result', label: 'Result' },
+      { field: 'description', label: 'Description' },
+      { field: 'createdAt', label: 'Started' },
+    ]
+
+    if (props.showDetails) {
+      columns.push({ field: 'updatedAt', label: 'Last Updated' })
+    }
 
     const fetchActiveData = async () => {
       const queries = await axios.$get('/blast/queries', {
