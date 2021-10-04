@@ -8,6 +8,7 @@ type Indel = {
     size: number;
   };
   csi: {
+    id: string;
     gi: string;
     defaultParent: string;
     parent: string;

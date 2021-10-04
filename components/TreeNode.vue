@@ -1,6 +1,6 @@
 <template>
   <div class='node-container'>
-    <b-collapse class='card' animation='slide'>
+    <b-collapse animation='fade' :open='false'>
       <template #trigger='props'>
         <div class='card-header' role='button'>
           <span>{{node.taxonName}}</span> &nbsp;
@@ -10,11 +10,11 @@
       </template>
 
       <div class='card-container'>
-        <div v-for='hit of node.specificHits.value' :key='hit.subject' class='card'>
-          <b>
+        <div v-for='hit of node.specificHits.value' :key='hit.subject'>
+          <NuxtLink :to='`/csi/${hit.csi.id}`'>
             {{ hit.indelInfo.size }} aa insert
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
-          </b>
+          </NuxtLink>
           <br>
           Query: <code>{{ hit.query }}</code>
           <br>
@@ -87,5 +87,15 @@ export default {
 <style scoped lang='scss'>
 .node-container {
   margin-left: 10px;
+  border: none;
+}
+
+.card-header {
+  width: fit-content;
+  padding: .25rem 1rem;
+}
+
+.card {
+  border: none;
 }
 </style>

@@ -1,8 +1,15 @@
 <template>
     <main class='content-box'>
       <b-loading v-model='isLoading' :can-cancel='true' />
-      <h1>Content</h1>
-      <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
+      <h1>Query Result: {{result.header}}</h1>
+      <h2>CSIs Present For:</h2>
+      <ul>
+        <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
+      </ul>
+      <hr>
+      <section>
+        <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
+      </section>
     </main>
 </template>
 
@@ -53,7 +60,7 @@ export default {
       if (status === 'completed-nr' || status === 'null') {
         result.header = 'Query has no result or failed to complete.'
       } else {
-        result.header = query.data.fileName
+        result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
         result.identified = query.data.identified
         result.tree = JSON.parse(query.data.tree)
       }
@@ -70,6 +77,13 @@ export default {
 }
 </script>
 
-<!--<style scoped>-->
+<style scoped lang='scss'>
+h2 {
+  font-size: 16px;
+}
 
-<!--</style>-->
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+</style>
