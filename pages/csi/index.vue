@@ -2,7 +2,12 @@
   <main class='content-box-lg'>
     <header>
       <h1> CSI Database </h1>
-      <b-input v-model='searchText' icon='magnify' placeholder='Search Queries'/>
+      <div class='control-box'>
+        <NuxtLink to='/csi/create'>
+          <b-button type='is-info' icon-left='chart-box-plus-outline'>Add CSI</b-button>
+        </NuxtLink>
+        <b-input v-model='searchText' icon='magnify' placeholder='Search Queries'/>
+      </div>
     </header>
     <b-table
       :data='rows'
@@ -98,6 +103,16 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.control-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  button {
+    margin-right: 15px;
   }
 }
 </style>
