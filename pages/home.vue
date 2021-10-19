@@ -17,7 +17,7 @@
 
 <script lang='ts'>
 import QueryPage from '~/pages/query.vue'
-import ResultsPage from '~/pages/results'
+import ResultsPage from '~/pages/results/index.vue'
 export default {
   name: 'HomePage',
   components: { ResultsPage, QueryPage },

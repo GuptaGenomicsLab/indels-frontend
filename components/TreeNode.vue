@@ -36,11 +36,11 @@ import { Indel } from '~/scripts/indel.type'
 type Node = {
   taxonName: string;
   specificHits: Indel[];
-  children: Node;
+  children: Node[];
 }
 type TreeNodeProps = {
   depth: number;
-  node: Node;
+  tree: Node;
   clickable: boolean;
 }
 
@@ -70,7 +70,7 @@ export default {
 
     const availableCsis = computed(() => props.tree.specificHits.filter(hit => hit !== null) ?? [])
 
-    const node = computed((): Node => ({
+    const node = computed(() => ({
       taxonName: props.tree?.taxonName ?? 'Loading',
       specificHits: availableCsis,
       children
