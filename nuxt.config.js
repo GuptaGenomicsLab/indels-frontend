@@ -1,4 +1,4 @@
-const ENV_DEVELOPMENT = true;
+require('dotenv').config()
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -43,7 +43,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,7 +58,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: ENV_DEVELOPMENT ? 'http://localhost:3001' : 'https://api.indels.com',
+    baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://api.indels.com',
     credentials: true
   },
 
