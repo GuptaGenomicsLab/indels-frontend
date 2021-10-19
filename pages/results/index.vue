@@ -78,7 +78,6 @@ export default {
     watch(searchText, fetch)
 
     const handleClick = (row) => {
-      console.log(row, row.url);
       router.push({path: row.url})
     }
 

@@ -6,15 +6,15 @@
         <h2 class='black'>Sign In</h2>
       </header>
       <b-field>
-        <b-input placeholder='Username'
-                 v-model='formData.username'
+        <b-input v-model='formData.username'
+                 placeholder='Username'
                  icon='account'
         />
       </b-field>
       <b-field>
-        <b-input placeholder='Password'
+        <b-input v-model='formData.password'
+                 placeholder='Password'
                  type='password'
-                 v-model='formData.password'
                  icon='lock'
                  password-reveal
         />

@@ -59,8 +59,8 @@
 import DnaIcon from '@/components/DnaIcon'
 
 export default {
-  middleware: 'auth',
   components: { DnaIcon },
+  middleware: 'auth',
   computed: {
     avatarUrl() {
       const properties = {

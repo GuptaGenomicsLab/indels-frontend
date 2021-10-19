@@ -47,7 +47,10 @@ type TreeNodeProps = {
 export default {
   name: 'TreeNode',
   props: {
-    depth: Number,
+    depth: {
+      type: Number,
+      default: 0
+    },
     tree: {
       type: Object,
       required: true
