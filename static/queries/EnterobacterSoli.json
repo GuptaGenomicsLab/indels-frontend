@@ -1,0 +1,1185 @@
+{
+  "taxonName": "root",
+  "specificHits": [ ],
+  "children": {
+    "Proteobacteria": {
+      "taxonName": "Proteobacteria",
+      "specificHits": [ ],
+      "children": {
+        "Gammaproteobacteria": {
+          "taxonName": "Gammaproteobacteria",
+          "specificHits": [ ],
+          "children": {
+            "Enterobacteriales": {
+              "taxonName": "Enterobacteriales",
+              "specificHits": [
+                {
+                  "indelInfo": {
+                    "type": "insertion",
+                    "start": 16,
+                    "end": 17,
+                    "size": 1
+                  },
+                  "subject": "VLGSHMLEVCPSIAVD|E|KPILDVQYLGIGGKADPAR",
+                  "query": "VLGSHMLEVCPSIAVE|E|KPILDVQHLGIGGKDDPAR",
+                  "csi": {
+                    "id": "7f3d3c79-af86-4b6f-8fc0-5e01be69b3a3",
+                    "createdAt": "2021-08-09T15:06:54.169Z",
+                    "updatedAt": "2021-08-09T15:06:54.270Z",
+                    "gi": "WP_000151707",
+                    "defaultParent": "Proteobacteria",
+                    "parent": "Gammaproteobacteria",
+                    "specificity": "Enterobacteriales",
+                    "sequence": "VLGSHMLEVCPSIAVE|E|KPILDVQHLGIGGKDDPAR",
+                    "type": "insertion",
+                    "eValue": "",
+                    "proteinName": "L-arabinose isomerase",
+                    "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                    "private": true
+                  }
+                }, {
+                  "indelInfo": {
+                    "type": "insertion",
+                    "start": 21,
+                    "end": 22,
+                    "size": 1
+                  },
+                  "subject": "DYTPYIFTKDQIEEELLFIPE|G|GMPDMQVLTWDGVLLALEL",
+                  "query": "DYTPYTFTKDQIEEELLFMPE|G|GMPDMQVLTLDGQLLALEL",
+                  "csi": {
+                    "id": "ae13eb8b-0417-43e1-ab90-f70fa0854cf5",
+                    "createdAt": "2021-08-09T15:06:54.169Z",
+                    "updatedAt": "2021-08-09T15:06:54.270Z",
+                    "gi": "WP_001610470",
+                    "defaultParent": "Proteobacteria",
+                    "parent": "Gammaproteobacteria",
+                    "specificity": "Enterobacteriales",
+                    "sequence": "DYTPYTFTKDQIEEELLFMPE|G|GMPDMQVLTLDGQLLALEL",
+                    "type": "insertion",
+                    "eValue": "",
+                    "proteinName": "Elongation factor P-like protein YeiP",
+                    "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                    "private": true
+                  }
+                }, {
+                  "indelInfo": {
+                    "type": "insertion",
+                    "start": 19,
+                    "end": 25,
+                    "size": 6
+                  },
+                  "subject": "VDKQTQAQLINGRLAIARL|VINANG|DCEYAIIPAVVADKIAQR",
+                  "query": "VDKLTQAQLINGRLAIARL|LVDNNS|EGEYAIIPASVADKIAQR",
+                  "csi": {
+                    "id": "ecabcf7b-6a51-425a-b857-52cc4720538f",
+                    "createdAt": "2021-08-09T15:06:54.169Z",
+                    "updatedAt": "2021-08-09T15:06:54.270Z",
+                    "gi": "ACI70584",
+                    "defaultParent": "Proteobacteria",
+                    "parent": "Gammaproteobacteria",
+                    "specificity": "Enterobacteriales",
+                    "sequence": "VDKLTQAQLINGRLAIARL|LVDNNS|EGEYAIIPASVADKIAQR",
+                    "type": "insertion",
+                    "eValue": "",
+                    "proteinName": "Hypothetical protein",
+                    "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                    "private": true
+                  }
+                }, {
+                  "indelInfo": {
+                    "type": "insertion",
+                    "start": 20,
+                    "end": 23,
+                    "size": 3
+                  },
+                  "subject": "SVQWNLTPVSGRVSDMVFLD|DSN|PLTGFMLIDTAIWGEPGNF",
+                  "query": "SVHWNLTPVSGRVSDMVFLD|DSN|PLTGFMLIDTAIWGEDGNF",
+                  "csi": {
+                    "id": "6a4cf041-24e2-439c-a79d-88bb1b7cca89",
+                    "createdAt": "2021-08-09T15:06:54.169Z",
+                    "updatedAt": "2021-08-09T15:06:54.270Z",
+                    "gi": "WP_000552295",
+                    "defaultParent": "Proteobacteria",
+                    "parent": "Gammaproteobacteria",
+                    "specificity": "Enterobacteriales",
+                    "sequence": "SVHWNLTPVSGRVSDMVFLD|DSN|PLTGFMLIDTAIWGEDGNF",
+                    "type": "insertion",
+                    "eValue": "",
+                    "proteinName": "Peptide ABC transporter permease",
+                    "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                    "private": true
+                  }
+                }
+              ],
+              "children": {
+                "Erwiniaceae-Enterobacteriaceae Clade": {
+                  "taxonName": "Erwiniaceae-Enterobacteriaceae Clade",
+                  "specificHits": [
+                    {
+                      "indelInfo": {
+                        "type": "insertion",
+                        "start": 22,
+                        "end": 23,
+                        "size": 1
+                      },
+                      "subject": "YIKGTKGKK|D|LITVAVEPTDSPVIAQALAG",
+                      "query": "YIKGTKGKT|D|LISVAVEPTDSPVIAQALAG",
+                      "csi": {
+                        "id": "ed866135-752c-41a0-8d51-c1025ca38799",
+                        "createdAt": "2021-08-09T15:06:54.173Z",
+                        "updatedAt": "2021-08-09T15:06:54.270Z",
+                        "gi": "AAA23654",
+                        "defaultParent": "Gammaproteobacteria",
+                        "parent": "Enterobacteriales",
+                        "specificity": "Erwiniaceae-Enterobacteriaceae Clade",
+                        "sequence": "GVGTGGTWTGVTPYIKGTKGKT|D|LISVAVEPTDSPVIAQALAG",
+                        "type": "insertion",
+                        "eValue": "",
+                        "proteinName": "Cysteine synthase A",
+                        "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                        "private": true
+                      }
+                    }, {
+                      "indelInfo": {
+                        "type": "deletion",
+                        "start": 28,
+                        "end": 28,
+                        "size": 1
+                      },
+                      "subject": "PIALLVNSLVDTSGPVIRAISSGDM| |LPDLAWLNSIPVIGSKLYSGWHGLLEMG",
+                      "query": "PIALLVNSIVDGSGPLIKAISSGDM| |LPDLAWLNTIPVIGAKLYAGWHNLLDMG",
+                      "csi": {
+                        "id": "9ec8fa73-9150-44e2-a409-09837895fddb",
+                        "createdAt": "2021-08-09T15:06:54.173Z",
+                        "updatedAt": "2021-08-09T15:06:54.270Z",
+                        "gi": "WP_021513077",
+                        "defaultParent": "Gammaproteobacteria",
+                        "parent": "Enterobacteriales",
+                        "specificity": "Erwiniaceae-Enterobacteriaceae Clade",
+                        "sequence": "FIIPIALLVNSIVDGSGPLIKAISSGDM TLPDLAWLNTIPVIGAKLYAGWHNLLDMG",
+                        "type": "deletion",
+                        "eValue": "",
+                        "proteinName": "Hypothetical protein",
+                        "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                        "private": true
+                      }
+                    }, {
+                      "indelInfo": {
+                        "type": "deletion",
+                        "start": 19,
+                        "end": 19,
+                        "size": 1
+                      },
+                      "subject": "NTLRFIERVGLPAIRIPLN| |RERIQVDEPYILVVPSYG",
+                      "query": "NTQRFIERLGLPAVRIPLN| |RERIQVDEPYILIVPSYG",
+                      "csi": {
+                        "id": "4f1e9985-e0d1-47fb-a342-04eb8800358e",
+                        "createdAt": "2021-08-09T15:06:54.173Z",
+                        "updatedAt": "2021-08-09T15:06:54.270Z",
+                        "gi": "WP_000080939",
+                        "defaultParent": "Gammaproteobacteria",
+                        "parent": "Enterobacteriales",
+                        "specificity": "Erwiniaceae-Enterobacteriaceae Clade",
+                        "sequence": "NTQRFIERLGLPAVRIPLN ERERIQVDEPYILIVPSYG",
+                        "type": "deletion",
+                        "eValue": "",
+                        "proteinName": "Ribonucleotide reductase stimulatory protein",
+                        "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                        "private": true
+                      }
+                    }, {
+                      "indelInfo": {
+                        "type": "insertion",
+                        "start": 17,
+                        "end": 18,
+                        "size": 1
+                      },
+                      "subject": "LSLKRANVVADTWAKGA|S|IPRSNLTTQGLGKKYPVVSNSTSKG",
+                      "query": "LSLKRANVVADAWAIGG|Q|IPRSNLTTQGLGKKYPIASNKTAQG",
+                      "csi": {
+                        "id": "f9af8437-908e-47c9-a392-026662783532",
+                        "createdAt": "2021-08-09T15:06:54.173Z",
+                        "updatedAt": "2021-08-09T15:06:54.271Z",
+                        "gi": "WP_000589790",
+                        "defaultParent": "Gammaproteobacteria",
+                        "parent": "Enterobacteriales",
+                        "specificity": "Erwiniaceae-Enterobacteriaceae Clade",
+                        "sequence": "LSLKRANVVADAWAIGG|Q|IPRSNLTTQGLGKKYPIASNKTAQG",
+                        "type": "insertion",
+                        "eValue": "",
+                        "proteinName": "Membrane protein",
+                        "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                        "private": true
+                      }
+                    }, {
+                      "indelInfo": {
+                        "type": "deletion",
+                        "start": 17,
+                        "end": 17,
+                        "size": 1
+                      },
+                      "subject": "LMVENGRNNTLWPQVVS| |IQSKNYAIAKRDDASQTLTTDW",
+                      "query": "LLVENGRGNTLWPQVVS| |LQAKNYTITQRDDAGQTLTTDW",
+                      "csi": {
+                        "id": "432dd1ea-e423-4b23-b54c-5e268da2776e",
+                        "createdAt": "2021-08-09T15:06:54.173Z",
+                        "updatedAt": "2021-08-09T15:06:54.271Z",
+                        "gi": "WP_000968394",
+                        "defaultParent": "Gammaproteobacteria",
+                        "parent": "Enterobacteriales",
+                        "specificity": "Erwiniaceae-Enterobacteriaceae Clade",
+                        "sequence": "LLVENGRGNTLWPQVVS VLQAKNYTITQRDDAGQTLTTDW",
+                        "type": "insertion",
+                        "eValue": "",
+                        "proteinName": "Outer membrane protein assembly factor BamC",
+                        "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                        "private": true
+                      }
+                    }
+                  ],
+                  "children": {
+                    "Enterobacteriaceae": {
+                      "taxonName": "Enterobacteriaceae",
+                      "specificHits": [
+                        {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 17,
+                            "end": 20,
+                            "size": 3
+                          },
+                          "subject": "YSLAMLHRAYFGKAKSE|IAA|QELPGMSLRELFII",
+                          "query": "YSLAMLHRAYFGKAKSQ|IAS|QELPGMSLRELFMI",
+                          "csi": {
+                            "id": "8b334231-ab78-413e-9b3a-56cea1b81e5c",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_024220201",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "YSLAMLHRAYFGKAKSQ|IAS|QELPGMSLRELFMILLLVVL",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "NADH: ubiquinone oxidoreductase subunit M",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 22,
+                            "end": 25,
+                            "size": 4
+                          },
+                          "subject": "DLHLCSDSPPRWRRAGTLEPAP|    |DITQLLKTWLNDEQQGTWWANGQVD",
+                          "query": "DLHLCSAWPARWRIRGRMEAAP|    |DVEELLREWLDDDQRAILLENGQLD",
+                          "csi": {
+                            "id": "a271bdbd-c1db-4cd5-86ae-9c20aaeff9f5",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "CAR94647",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "DLHLCSAWPARWRIRGRMEAAP    FDAPDVEELLREWLDDDQRAILLENGQLD",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Twitching motility protein PilT",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 34,
+                            "end": 34,
+                            "size": 1
+                          },
+                          "subject": "LFAGDEFLTAFVNEHRSVRVVLLRGDNGEHALDA| |IARPTDNFIPNPTPADEV",
+                          "query": "LFSGDDFLNTFVAEHSSIRVVQLHNDSGEHNLQD| |INHPAEDFTATPSPADEV",
+                          "csi": {
+                            "id": "db236a04-f0d4-4542-a0ed-783812856823",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_001589860",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "LFSGDDFLNTFVAEHSSIRVVQLHNDSGEHNLQD AINHPAEDFTATPSPADEV",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "2, 3-dihyroxybenzoate-AMP ligase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 16,
+                            "end": 16,
+                            "size": 1
+                          },
+                          "subject": "YRATHGAHVGVVTVHP| |EDKYVFIHGPENPDAGWHYDFHHR",
+                          "query": "YRASQGAHVGVVTVHP| |SEKYVFIHGPENPDETWHYDFHHR",
+                          "csi": {
+                            "id": "00acbf36-b5ed-47ed-80ca-8f0be957ef7c",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "CTV70932",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "YRASQGAHVGVVTVHP KSEKYVFIHGPENPDETWHYDFHHR",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "ATP/GTP-binding protein",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 17,
+                            "end": 18,
+                            "size": 1
+                          },
+                          "subject": "KIIPVLEAAYGDRFSPP|A|NIVSVILKDDRKGRKNERGFYLY",
+                          "query": "KIMPVLEAAYGERFSAP|A|NVVSSILNDDRKGRKNGRGFYLY",
+                          "csi": {
+                            "id": "a2a6ed61-324b-4bb3-b275-06d6d928de07",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_032330678",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "KIMPVLEAAYGERFSAP|A|NVVSSILNDDRKGRKNGRGFYLY",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "Multifunctional fatty acid oxidation complex subunit alpha",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 25,
+                            "end": 27,
+                            "size": 2
+                          },
+                          "subject": "YLGNDAEKWQAWDSCALLLASNAED|AI|PTLIDQGDADQFLAGQL",
+                          "query": "YLGEDKNAWLEWDSCALMYASNAQD|AI|PTLIDQGDNDQFLADQL",
+                          "csi": {
+                            "id": "e9a1dff6-69ce-46b7-9983-e1618eceebec",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000421369",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "YLGEDKNAWLEWDSCALMYASNAQD|AI|PTLIDQGDNDQFLADQL",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "S-formylglutathione hydrolase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 22,
+                            "end": 23,
+                            "size": 1
+                          },
+                          "subject": "GKKAVDALAGQSAKLLNGIPID|E|DDFFGRQLAFNMLP",
+                          "query": "GKKAVDALAGQSAKLLNGIPID|E|EDFFGRQLAFNMLP",
+                          "csi": {
+                            "id": "ba90f16d-0ad1-41f6-aa83-d583c26b3f6a",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_001289176",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "GKKAVDALAGQSAKLLNGIPID|E|EDFFGRQLAFNMLP",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "Aspartate-semialdehyde dehydrogenase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 18,
+                            "end": 18,
+                            "size": 1
+                          },
+                          "subject": "WIHIDDMVNGILWLLDND| |RGPFNMVSPYPVRNEQF",
+                          "query": "WIHIDDMVNGILWLLDND| |RGPFNMVSPYPVRNEQF",
+                          "csi": {
+                            "id": "f1c780e9-10f0-4321-a09a-8e3e0350f06f",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_009430590",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "WIHIDDMVNGILWLLDND LRGPFNMVSPYPVRNEQF",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Epimerase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 20,
+                            "end": 21,
+                            "size": 2
+                          },
+                          "subject": "GPLLAGASLAISSYLLSLRW|  |ELNGVIDNALRLFP",
+                          "query": "GPLLAGASLAISSYLLSLRW|  |DLNTVIDNVLRIFP",
+                          "csi": {
+                            "id": "cdf1f39a-d3e3-4989-88be-9190f112c011",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000912606",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "GPLLAGASLAISSYLLSLRW  ASDLNTVIDNVLRIFP",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Membrane protein",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 20,
+                            "end": 24,
+                            "size": 5
+                          },
+                          "subject": "GRQIADDYLRLLSQGEHQVA|     |ENDPRLNEIVANL",
+                          "query": "GRQIADDYLTQLGQGEEQVA|     |ENDPRLNEIVSHL",
+                          "csi": {
+                            "id": "70709cd1-0ee6-4cc8-a09f-4f36340eec2c",
+                            "createdAt": "2021-08-09T15:06:54.170Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "CAA35552",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "GRQIADDYLTQLGQGEEQVA     RWLEAENDPRLNEIVSHL",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Formate hydrogenlyase subunit 7",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 12,
+                            "end": 12,
+                            "size": 1
+                          },
+                          "subject": "LDMCEQLIRDGI| |QSDSLNLATIAIACAIGYLNFR",
+                          "query": "LDVLEGYLVDGT| |KTDTVNLATIAIACAVGYLNFR",
+                          "csi": {
+                            "id": "fd88edcc-3bc7-4872-96ac-0e6b26091791",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000779789",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "LDVLEGYLVDGT LKTDTVNLATIAIACAVGYLNFR",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Glutathione S-transferase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 21,
+                            "end": 22,
+                            "size": 1
+                          },
+                          "subject": "WSIGVYGFVLWLPSIIRSGGE|N|LGMVEVGWLSSVPYLAA",
+                          "query": "WSIGVYGFVLWLPSIIRSGGE|N|LGMVEVGWLSSVPYLAA",
+                          "csi": {
+                            "id": "292ab175-0b07-4cf6-be88-0fa08c0ac202",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_032237477",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "WSIGVYGFVLWLPSIIRSGGE|N|LGMVEVGWLSSVPYLAA",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "Major facilitator superfamily transporter",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 26,
+                            "end": 26,
+                            "size": 1
+                          },
+                          "subject": "QRILTVLAGMATVLMYLFINGSPEHL| |WFILTLGFFSSAI",
+                          "query": "QRILTVLAGLAAILMYVFNTGTPAHM| |WSILALGFFSSAI",
+                          "csi": {
+                            "id": "8c9c580d-fe98-4f1c-b649-ea1bba5fc065",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000185209",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "QRILTVLAGLAAILMYVFNTGTPAHM AWSILALGFFSSAI",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Major facilitator superfamily transporter",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 21,
+                            "end": 22,
+                            "size": 1
+                          },
+                          "subject": "LHDLCSGMKMFPQILVNVRFT|A|GKGDPLENENVKAVMADVE",
+                          "query": "LHDLCSGMKMFPQILVNVRYT|A|DSGDPLEHESVKAVTAEVE",
+                          "csi": {
+                            "id": "8be4da3b-f4a2-4f22-8dde-4ecb1728b2d8",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000071132",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "LHDLCSGMKMFPQILVNVRYT|A|DSGDPLEHESVKAVTAEVE",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "Phosphoglucosamine mutase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 17,
+                            "end": 17,
+                            "size": 1
+                          },
+                          "subject": "DYLGFSYYMTNAVKAEG| |TGDAISGFEGSVPNPHV",
+                          "query": "DYLGFSYYMTNAVKAEG| |TGDAISGFEGSVPNPYV",
+                          "csi": {
+                            "id": "8b37f881-2940-46f5-9045-ef79ba6f0f60",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_009671380",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "DYLGFSYYMTNAVKAEG GTGDAISGFEGSVPNPYV",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Glycosyl hydrolase 1 family protein",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 22,
+                            "end": 27,
+                            "size": 6
+                          },
+                          "subject": "QHASVALQQKSKSHALARLIRH|      |AGMPWGYRRRAR",
+                          "query": "QHASVDLQQRSKSAALARLMKH|      |ADVPWGYRRRAR",
+                          "csi": {
+                            "id": "cec5823d-a5ab-426e-bdc9-0eb29468d5e4",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000046777",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "QHASVDLQQRSKSAALARLMKH      EVSEVIADVPWGYRRRAR",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "23S rrna [uracil(1939)-C(5)]-methyltransferase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 15,
+                            "end": 15,
+                            "size": 1
+                          },
+                          "subject": "LAIAKNVRSILRSNG| |DARLTRSGDTFIPLYDR",
+                          "query": "LAIAKNVRSILRNHG| |DARLTRSGDTFIPLYDR",
+                          "csi": {
+                            "id": "5d5c6a03-db31-4e3a-aa4d-3fc3f98fac9a",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_000102887",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "LAIAKNVRSILRNHG IDARLTRSGDTFIPLYDR",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "N-acetylmuramoyl-L-alanine amidase",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "deletion",
+                            "start": 20,
+                            "end": 20,
+                            "size": 1
+                          },
+                          "subject": "LVVQPLGWYTEPLTVVMRDE| |PPFRGERLFVGLQHARIY",
+                          "query": "LVVQPLGWYNEPLTVVMHGD| |APQRGERLFVGLQHARLY",
+                          "csi": {
+                            "id": "c5d63d7e-be93-45fb-8987-a02e42365f5f",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "AAA23639",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "LVVQPLGWYNEPLTVVMHGD DAPQRGERLFVGLQHARLY",
+                            "type": "deletion",
+                            "eValue": "",
+                            "proteinName": "Sulfate ABC transporter ATP-binding protein CysA",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }, {
+                          "indelInfo": {
+                            "type": "insertion",
+                            "start": 19,
+                            "end": 20,
+                            "size": 1
+                          },
+                          "subject": "NIAPNMDATITPHYIHKRG|N|IQWQNEFRYLTQAGTG",
+                          "query": "NIAPNMDATITPHYMHRRG|N|IMWENEFRYLTQAGAG",
+                          "csi": {
+                            "id": "7d14ea88-42ae-4cf7-adc8-550986ee5d00",
+                            "createdAt": "2021-08-09T15:06:54.171Z",
+                            "updatedAt": "2021-08-09T15:06:54.270Z",
+                            "gi": "WP_032172667",
+                            "defaultParent": "Enterobacteriales",
+                            "parent": "Erwiniaceae-Enterobacteriaceae Clade",
+                            "specificity": "Enterobacteriaceae",
+                            "sequence": "NIAPNMDATITPHYMHRRG|N|IMWENEFRYLTQAGAG",
+                            "type": "insertion",
+                            "eValue": "",
+                            "proteinName": "LPS assembly protein LptD",
+                            "reference": "Adeolu M, Alnajar S, Naushad S, Gupta RS (2016) Genome-based phylogeny and taxonomy of the Ã��?EnterobacterialesÃ•: proposal for Enterobacterales ord. nov. divided into the families Enterobacteriaceae, Erwiniaceae fam. nov., Pectobacteriaceae fam. nov., Yersiniaceae fam. nov., Hafniaceae fam. nov., Morganellaceae fam. nov., and Budviciaceae fam. nov. International Journal of Systematic and Evolutionary Microbiology  66:5575-5599. doi: 10.1099/ijsem.0.001485",
+                            "private": true
+                          }
+                        }
+                      ],
+                      "children": {
+                        "Core Enterobacteriaceae": {
+                          "taxonName": "Core Enterobacteriaceae",
+                          "specificHits": [
+                            {
+                              "indelInfo": {
+                                "type": "insertion",
+                                "start": 19,
+                                "end": 21,
+                                "size": 2
+                              },
+                              "subject": "EDVGRHVALDKLLGRRARE|SD|IWKQGAALVSSRASYEMVQK",
+                              "query": "EDVGRHVALDKLLGRRSQE|GE|SWQQGAVLVSSRASYEMVQK",
+                              "csi": {
+                                "id": "74bd8b13-9861-4848-9d1e-189847323ffc",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.271Z",
+                                "gi": "WP_000186171",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "EDVGRHVALDKLLGRRSQE|GE|SWQQGAVLVSSRASYEMVQK",
+                                "type": "insertion",
+                                "eValue": "",
+                                "proteinName": "Sulfurtransferase FdhD",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 21,
+                                "end": 21,
+                                "size": 1
+                              },
+                              "subject": "SSLKEQRVAASKVLSGPQAKP| |GEKAEFVEKVRRALYLGK",
+                              "query": "SSLKEQRVAASKVLSGPKAQP| |GDKTEFIEKVRRALYLGK",
+                              "csi": {
+                                "id": "9857546d-6c95-4aa5-bb9d-9d0325df0bf7",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.271Z",
+                                "gi": "WP_061354366",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "SSLKEQRVAASKVLSGPKAQP AGDKTEFIEKVRRALYLGK",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Phosphogluconate dehydrogenase",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 25,
+                                "end": 25,
+                                "size": 1
+                              },
+                              "subject": "CMPDKRDPQEQKLAKVEQACRLLEQ| |SSITLEMLAQQVAMSPFHFHRLFK",
+                              "query": "CQPEKANAQQHRLDKITHACRLLEQ| |TPVTLEALADQVAMSPFHLHRLFK",
+                              "csi": {
+                                "id": "c6591217-6052-4bdb-9f2c-86e8e02f73c6",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.271Z",
+                                "gi": "WP_000710374",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "CQPEKANAQQHRLDKITHACRLLEQ ETPVTLEALADQVAMSPFHLHRLFK",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Bifunctional transcriptional regulator/O6-methylguanine-DNA methyltransferase",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 13,
+                                "end": 14,
+                                "size": 2
+                              },
+                              "subject": "VVLLGGYIVLEPR|  |SHYLISDQKTRLVEEK",
+                              "query": "VVLLGGYIVLEPR|  |SHYLLSDQKSRLVEEK",
+                              "csi": {
+                                "id": "32c564b7-8ec2-4dd0-ac38-8e0767482147",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.271Z",
+                                "gi": "KGM68179",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "VVLLGGYIVLEPR  SASHYLLSDQKSRLVEEK",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Deoxyribose operon repressor",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 25,
+                                "end": 28,
+                                "size": 4
+                              },
+                              "subject": "TAWHAAMRATEADKEKLRACFEATQ|    |DIASQADVRFHLAIAEA",
+                              "query": "TAWHAAMRATPGDKEKIQLCFEATL|    |DIASQADVRFHLAIAEA",
+                              "csi": {
+                                "id": "71176273-08f6-4a8d-b03a-87a6fc635a28",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.271Z",
+                                "gi": "WP_042110293",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "TAWHAAMRATPGDKEKIQLCFEATL    SEDPDIASQADVRFHLAIAEA",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "FCD domain-containing protein",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 20,
+                                "end": 23,
+                                "size": 4
+                              },
+                              "subject": "PLLSRSISLSYADAGELQKA|    |LSTKGSLAVDKRTNRLL",
+                              "query": "PLENRSITLQYADAGELAKA|    |LSAKGSMTVDKRTNRLL",
+                              "csi": {
+                                "id": "e1e30f4e-2bb1-48e7-8446-75a1d232a3fe",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "WP_001489066",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "PLENRSITLQYADAGELAKA    GEKLLSAKGSMTVDKRTNRLL",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "DNA transporter HofQ",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 20,
+                                "end": 20,
+                                "size": 1
+                              },
+                              "subject": "VFPASYVGESRQVLSAPPSG| |PPLFIMLDGT",
+                              "query": "VFPASYADEQREVIFTPPAG| |PPLFIMLDGT",
+                              "csi": {
+                                "id": "7f0c3e91-94ac-4b49-ade3-2cc3b5676cd6",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "EGI40697",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "VFPASYADEQREVIFTPPAG KPPLFIMLDGT",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Putative cytoplasmic protein",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 16,
+                                "end": 17,
+                                "size": 2
+                              },
+                              "subject": "LSAVNFPEVSLPLHGG|  |LLHIHENRPG",
+                              "query": "LSAVNFPEVSLPLHGG|  |LMHIHENRPG",
+                              "csi": {
+                                "id": "7d2068e4-f625-47c6-9d57-073b2b1dc077",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "CDL39102",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "LSAVNFPEVSLPLHGG  RRLMHIHENRPG",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "D-3-Phosphoglycerate dehydrogenase",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 20,
+                                "end": 21,
+                                "size": 2
+                              },
+                              "subject": "NSGDVFHEDVALFARQLARQ|  |DAMYIGDALLDFG",
+                              "query": "NSGDIFHQDAANFIRKLKVQ|  |NVMITGDALLDFG",
+                              "csi": {
+                                "id": "8232791f-a514-4b44-b79b-0386983c8334",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "EGI31323",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "NSGDIFHQDAANFIRKLKVQ  KDNVMITGDALLDFG",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Colanic acid biosynthesis glycosyl transferase",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 17,
+                                "end": 17,
+                                "size": 1
+                              },
+                              "subject": "LQLPHPSLEHWQERLNP| |PGQKRLVACIDEKIVG",
+                              "query": "LQVPHPSEQMWLERLTA| |PGIKQLVACIDGIVVG",
+                              "csi": {
+                                "id": "eb65ab9d-d756-45d2-b246-33b55b820ca1",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "ERA34425",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "LQVPHPSEQMWLERLTA RPGIKQLVACIDGIVVG",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Acetyltransferase",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 22,
+                                "end": 33,
+                                "size": 12
+                              },
+                              "subject": "TTPTPVPGSDDINRAYEEGWVG|            |AHGEKVPE",
+                              "query": "TTPTPQPGSDEINRAYEEGWVG|            |QKGEKVPE",
+                              "csi": {
+                                "id": "e4264ffd-1be4-4cd9-a1aa-19ea49918d02",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "WP_024247473",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "TTPTPQPGSDEINRAYEEGWVG            NHALAFIGDTLSQKGEKVPE",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Hypothetical protein",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }, {
+                              "indelInfo": {
+                                "type": "deletion",
+                                "start": 7,
+                                "end": 8,
+                                "size": 2
+                              },
+                              "subject": "MSWIERI|  |NITPTRKASIPEGVWTKCDSCGQVL",
+                              "query": "MSWIERI|  |NITPTRKASIPEGVWTKCDSCGQVL",
+                              "csi": {
+                                "id": "3d2852f5-53e8-4101-a684-ef4965d33052",
+                                "createdAt": "2021-08-09T15:06:54.179Z",
+                                "updatedAt": "2021-08-09T15:06:54.272Z",
+                                "gi": "WP_062864229",
+                                "defaultParent": "Erwiniaceae-Enterobacteriaceae Clade",
+                                "parent": "Enterobacteriaceae",
+                                "specificity": "Core Enterobacteriaceae",
+                                "sequence": "MSWIERI  KSNITPTRKASIPEGVWTKCDSCGQVL",
+                                "type": "deletion",
+                                "eValue": "",
+                                "proteinName": "Acetyl-CoA carboxylase carboxyl transferase subunit beta",
+                                "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                "private": true
+                              }
+                            }
+                          ],
+                          "children": {
+                            "Enterobacter clade": {
+                              "taxonName": "Enterobacter clade",
+                              "specificHits": [
+                                {
+                                  "indelInfo": {
+                                    "type": "insertion",
+                                    "start": 20,
+                                    "end": 21,
+                                    "size": 1
+                                  },
+                                  "subject": "RFGAHPATVPSTVIHQLSVY|Q|QPEDITDPETPYTGD",
+                                  "query": "RFGAHPATVPSTVIHQLSVY|Q|QPEGITDPETPYAGD",
+                                  "csi": {
+                                    "id": "ea3cd4b2-c875-449a-a4bd-2be307168a36",
+                                    "createdAt": "2021-08-09T15:06:54.176Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "AEW75768",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "RFGAHPATVPSTVIHQLSVY|Q|QPEGITDPETPYAGD",
+                                    "type": "insertion",
+                                    "eValue": "",
+                                    "proteinName": "Transcriptional activator rfaH",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "deletion",
+                                    "start": 9,
+                                    "end": 9,
+                                    "size": 1
+                                  },
+                                  "subject": "LTHYAVNAN| |TLKEGKTLSALPAGYKGTSFAAGLALSADGKQLYVANR",
+                                  "query": "LTHYALDSN| |RLKEGKTVSALPDGYKGTSFAAGLALSADGKQLYVANR",
+                                  "csi": {
+                                    "id": "213d4df4-9bdf-41da-8d26-7a0376ab46d8",
+                                    "createdAt": "2021-08-09T15:06:54.176Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "WP_063133700",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "LTHYALDSN GRLKEGKTVSALPDGYKGTSFAAGLALSADGKQLYVANR",
+                                    "type": "deletion",
+                                    "eValue": "",
+                                    "proteinName": "6-Phosphogluconolactonase",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "deletion",
+                                    "start": 8,
+                                    "end": 8,
+                                    "size": 1
+                                  },
+                                  "subject": "SLVLDATY| |GLPPLRMEDRSGDDAVMWQPERLASMTLTS",
+                                  "query": "ALVLDGHY| |GLAALSMHAPSGEYRVAWQPERLASMTLTS",
+                                  "csi": {
+                                    "id": "608945c9-9788-4218-90de-a179b4ec4ae8",
+                                    "createdAt": "2021-08-09T15:06:54.176Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "WP_061771982",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "ALVLDGHY DGLAALSMHAPSGEYRVAWQPERLASMTLTS",
+                                    "type": "deletion",
+                                    "eValue": "",
+                                    "proteinName": "O-succinylbenzoateÃ‘CoA ligase",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "deletion",
+                                    "start": 20,
+                                    "end": 29,
+                                    "size": 10
+                                  },
+                                  "subject": "GAGPSGRMAEQAAKEYAPGK|          |CAGSYERGVADLQAIKFGEHD",
+                                  "query": "GAGPSGCVAKQAADEYAPGK|          |DATSYERGVADLQAINFGEHD",
+                                  "csi": {
+                                    "id": "dfc68bf1-9519-4906-b3dc-39c61ee2a49c",
+                                    "createdAt": "2021-08-09T15:06:54.176Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "WP_061771403",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "GAGPSGCVAKQAADEYAPGK          TPVMAITADDDATSYERGVADLQAINFGEHD",
+                                    "type": "deletion",
+                                    "eValue": "",
+                                    "proteinName": "N-acetylmuramic acid 6-phosphate etherase",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "deletion",
+                                    "start": 6,
+                                    "end": 9,
+                                    "size": 4
+                                  },
+                                  "subject": "QPDLLD|    |HQFRTRSPLTHCMTNDVVQTFTANVLL",
+                                  "query": "QPDLLD|    |HHFRTRSPLTHCMTNDVVQTFTANVLL",
+                                  "csi": {
+                                    "id": "1c9fefc0-b7d6-4200-a0d0-10b8552ecfb4",
+                                    "createdAt": "2021-08-09T15:06:54.177Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "WP_063943702",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "QPDLLD    LHVLHHFRTRSPLTHCMTNDVVQTFTANVLL",
+                                    "type": "deletion",
+                                    "eValue": "",
+                                    "proteinName": "Hydroxyethylthiazole kinase",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "insertion",
+                                    "start": 20,
+                                    "end": 21,
+                                    "size": 1
+                                  },
+                                  "subject": "PRWQGQCSACHAWNTITEVR|G|VAASPSVARNERLSGYAG",
+                                  "query": "PRWQGQCSACHAWNTITEVR|G|VAASPSVARNERLSGYAG",
+                                  "csi": {
+                                    "id": "946ee7e9-b442-4fda-8cb5-6a2388882085",
+                                    "createdAt": "2021-08-09T15:06:54.177Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "CDL35642",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "PRWQGQCSACHAWNTITEVR|G|VAASPSVARNERLSGYAG",
+                                    "type": "insertion",
+                                    "eValue": "",
+                                    "proteinName": "DNA repair protein RadA",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }, {
+                                  "indelInfo": {
+                                    "type": "deletion",
+                                    "start": 16,
+                                    "end": 16,
+                                    "size": 1
+                                  },
+                                  "subject": "DADSAPVALRFAIEPQ| |EIVWQTDPIT",
+                                  "query": "DADSAPVALRFAIEPH| |DILWRTDPIT",
+                                  "csi": {
+                                    "id": "74bc070e-1e14-4f49-8c50-281f847f9b1a",
+                                    "createdAt": "2021-08-09T15:06:54.177Z",
+                                    "updatedAt": "2021-08-09T15:06:54.271Z",
+                                    "gi": "WP_061771410",
+                                    "defaultParent": "Enterobacteriaceae",
+                                    "parent": "Core Enterobacteriaceae",
+                                    "specificity": "Enterobacter clade",
+                                    "sequence": "DADSAPVALRFAIEPH GDILWRTDPIT",
+                                    "type": "deletion",
+                                    "eValue": "",
+                                    "proteinName": "Xaa-Pro aminopeptidase",
+                                    "reference": "Alnajar S, Gupta RS (2017) Phylogenomics and comparative genomic studies delineate six main clades within the family Enterobacteriaceae and support the reclassification of several polyphyletic members of the family. Infection, Genetics and Evolution 54:108-127",
+                                    "private": true
+                                  }
+                                }
+                              ],
+                              "children": { }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
