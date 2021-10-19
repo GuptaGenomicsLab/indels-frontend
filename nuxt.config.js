@@ -30,7 +30,9 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/axios.ts'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -63,8 +65,7 @@ export default {
     redirect: {
       login: '/',
       logout: '/',
-      home: '/home',
-      callback: '/home'
+      home: '/home'
     },
     strategies: {
       local: false,

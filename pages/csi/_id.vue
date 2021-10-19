@@ -14,6 +14,9 @@
       <b-field horizontal label='Default Parent'>
         <b-input v-model='form.defaultParent' />
       </b-field>
+      <b-field horizontal label='Sequence'>
+        <b-input v-model='form.sequence' />
+      </b-field>
       <b-field horizontal label='Protein Name'>
         <b-input v-model='form.proteinName' />
       </b-field>
