@@ -75,10 +75,6 @@ export default {
     strategies: {
       local: false,
       cookie: {
-        cookie: {
-          prefix: '',
-          name: 'indels.com/session.id'
-        },
         user: {
           autoFetch: true,
           property: false
