@@ -1,7 +1,8 @@
 <template>
   <main class='index-main'>
     <section class='box-left'>
-      <LoginForm />
+      <LoginForm v-if='focusLogin' @switch='focusLogin = !focusLogin'/>
+      <RegisterForm v-else @switch='focusLogin = !focusLogin' />
     </section>
     <section class='box-right'>
       <h1>Identify genomes using conserved signature indels.</h1>
@@ -16,8 +17,10 @@
 </template>
 
 <script>
+import {ref} from '@vue/composition-api'
 import TreeNode from '@/components/TreeNode'
 import LoginForm from '@/components/LoginForm'
+import RegisterForm from '@/components/RegisterForm'
 
 const sampleQueries = [
   {name: 'Enterobacter Soli', fileName: 'EnterobacterSoli'}
@@ -25,14 +28,16 @@ const sampleQueries = [
 
 export default {
   name: 'RootPage',
-  components: { TreeNode, LoginForm },
+  components: { TreeNode, LoginForm, RegisterForm },
   setup() {
+    const focusLogin = ref(true);
     const random = sampleQueries[Math.floor(Math.random() * sampleQueries.length)]
     const tree = require(`static/queries/${random.fileName}.json`)
 
     return {
       name: random.name,
-      tree
+      tree,
+      focusLogin
     }
   }
 }

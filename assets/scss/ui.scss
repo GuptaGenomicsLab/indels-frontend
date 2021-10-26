@@ -36,6 +36,22 @@ h2 {
   background: linear-gradient(to right, #299ffa, #299ffa);
 }
 
+.secondary-button {
+  background: $white;
+  color: $gray;
+  font-family: Arial, sans-serif;
+  border: $primary .25px solid;
+  border-radius: 3px;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+  padding: 12px 5px;
+}
+
+.secondary-button:hover {
+  background: #e4eeff
+}
+
+
 .space-hz-sm {
   margin-top: 10px;
   margin-bottom: 10px;

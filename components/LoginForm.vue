@@ -24,7 +24,7 @@
         <NuxtLink to='/forgot-password'>Forgot Password?</NuxtLink>
       </footer>
       <button id='login-button' class='primary-button space-hz-sm' type='submit'>Login</button>
-<!--    <button class='secondary-button extended'>Sign Up</button>-->
+      <button id='register-button' class='secondary-button extended space-hz-sm' @click='$emit("switch")'>No Account? Register!</button>
     </form>
   </div>
 </template>
@@ -58,7 +58,6 @@ export default {
 
 <style scoped lang='scss'>
 @import '~assets/scss/globals.scss';
-
 form {
   header {
     display: flex;
