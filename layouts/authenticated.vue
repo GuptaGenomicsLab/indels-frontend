@@ -35,6 +35,12 @@
               Bulk Edit CSIs
             </NuxtLink>
           </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/results/all'>
+              <b-icon icon='table' size='md' />
+              View All Queries
+            </NuxtLink>
+          </b-dropdown-item>
         </b-dropdown>
 
         <b-dropdown close-on-click append-to-body position='is-bottom-left'>
