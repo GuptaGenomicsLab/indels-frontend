@@ -131,8 +131,8 @@ export default {
             <span>${message}</span>
           </li>`)
         }</ul>`
-        console.log(validationErrors) // to remove
-        const message = validate.length < 1 ? header : header // + validationErrors
+
+        const message = validate.length < 1 ? header : header + validationErrors.slice(0, 15);
         this.$buefy.dialog.prompt({
           type: 'is-danger',
           message: message + '<br>Please retype your password to confirm.',
@@ -149,7 +149,7 @@ export default {
       })
     },
     openSuccessToast() {
-      this.$buefy.toast({
+      this.$buefy.toast.open({
         type: 'is-success',
         message: 'Import successful.'
       })

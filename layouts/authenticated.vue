@@ -29,6 +29,12 @@
               Manage Users
             </NuxtLink>
           </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/import'>
+              <b-icon icon='database' size='md' />
+              Bulk Edit CSIs
+            </NuxtLink>
+          </b-dropdown-item>
         </b-dropdown>
 
         <b-dropdown close-on-click append-to-body position='is-bottom-left'>
