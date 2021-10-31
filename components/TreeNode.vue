@@ -79,7 +79,7 @@ export default {
 
     const shortReference = (full: string): string => {
       const segments = full.match(/.+\(\d{4}\)/g);
-      if (segments === null ?? segments.length < 1)
+      if (segments === null || segments.length < 1)
         return full.slice(0, 32);
       return segments[0];
     }
