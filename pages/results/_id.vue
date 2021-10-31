@@ -7,6 +7,7 @@
         <ul>
           <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
         </ul>
+        <p v-if='result.clinical'>Searched for Clinical CSIs only.</p>
         <hr>
         <figure>
           <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
@@ -51,7 +52,8 @@ export default {
     const result = reactive({
       header: 'Loading...',
       identified: [],
-      tree: null
+      tree: null,
+      clinical: false
     })
     const isLoading = ref(false)
 
@@ -84,6 +86,7 @@ export default {
         result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
         result.identified = query.data.identified
         result.tree = JSON.parse(query.data.tree)
+        result.clinical = query.data.clinical
       }
     }
 

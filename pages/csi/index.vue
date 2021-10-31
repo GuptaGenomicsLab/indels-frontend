@@ -37,7 +37,8 @@ const columns = [
   { field: 'defaultParent', label: 'Default Parent' },
   { field: 'sequence', label: 'Sequence' },
   { field: 'type', label: 'Indel Type' },
-  { field: 'proteinName', label: 'Protein' }
+  { field: 'proteinName', label: 'Protein' },
+  { field: 'clinical', label: 'Clinical'}
 ]
 
 export default {

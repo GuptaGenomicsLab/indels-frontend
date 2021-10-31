@@ -50,7 +50,7 @@
           </b-select>
         </b-field>
         <b-field label='Clinical' horizontal>
-          <b-checkbox v-model='form.clinicalOnly' type='is-info' disabled>
+          <b-checkbox v-model='form.clinicalOnly' type='is-info'>
             Restrict Query to Clinically Important CSIs Only
           </b-checkbox>
         </b-field>
@@ -95,7 +95,7 @@ export default {
       const formData = new FormData()
       formData.append('description', form.description)
       formData.append('sequenceType', form.type)
-      // formData.append('clinicalOnly', form.clinicalOnly);
+      formData.append('clinicalOnly', form.clinicalOnly);
       formData.append('file', file.value)
 
       const queryID = await axios.$post('/blast/start-query', formData);

@@ -30,7 +30,13 @@
         <b-input v-model='form.reference' />
       </b-field>
       <b-field horizontal label='Private'>
-        <b-input v-model='form.private' />
+        <b-checkbox v-model='form.private' />
+      </b-field>
+      <b-field horizontal label='Clinical'>
+        <b-checkbox v-model='form.clinical' />
+      </b-field>
+      <b-field horizontal label='Hidden'>
+        <b-checkbox v-model='form.hidden' />
       </b-field>
       <b-button type='is-success' native-type='submit' icon-left='pencil'>
         Submit
@@ -56,7 +62,9 @@ const formDefaults = {
   eValue: '',
   proteinName: '',
   reference: '',
-  private: false
+  private: false,
+  clinical: false,
+  hidden: false
 }
 
 export default {
