@@ -1,22 +1,43 @@
 <template>
     <main class='content-box'>
-      <b-loading v-model='isLoading' :can-cancel='true' />
-      <h1>Query Result: {{result.header}}</h1>
-      <h2>CSIs Present For:</h2>
-      <ul>
-        <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
-      </ul>
-      <hr>
-      <figure>
-        <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
-      </figure>
+      <article>
+        <b-loading v-model='isLoading' :can-cancel='true' />
+        <h1>Query Result: {{result.header}}</h1>
+        <h2>CSIs Present For:</h2>
+        <ul>
+          <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
+        </ul>
+        <hr>
+        <figure>
+          <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
+        </figure>
+      </article>
+      <footer class='content-box'>
+        <b>CSI References:</b>
+        <div class='reference-box'>
+          <p v-for='reference in references' :key='reference'>{{reference}}</p>
+        </div>
+        <b>General References:</b>
+        <div class='reference-box'>
+          <p v-for='reference in GENERAL_REFERENCES' :key='reference'>{{reference}}</p>
+        </div>
+        <br>
+        <b-button @click='copyReferences' label='Copy References to Clipboard' expanded />
+      </footer>
     </main>
 </template>
 
 <script>
 import { computed, reactive, ref, useFetch, useRoute } from '@nuxtjs/composition-api'
+import _ from 'lodash';
 import { useAxios } from '@/scripts/useHooks'
 import TreeNode from '@/components/TreeNode'
+import {copiedToClipboard} from '@/scripts/ui'
+
+const GENERAL_REFERENCES = [
+  'Gupta, R.S. (2014). Identification of conserved indels that are useful for classification and evolutionary studies. In Methods in Microbiology, M.Goodfellow, I.Sutcliffe, and J.Chun, eds. (Oxford: Academic Press), pp. 153-182.',
+  'Gupta, R.S. (2016). Impact of genomics on the understanding of microbial evolution and classification: the importance of Darwin\'s views on classification. FEMS Microbiol Rev. 40, 520-553.'
+];
 
 export default {
   name: 'ResultPage',
@@ -68,10 +89,29 @@ export default {
 
     useFetch(fetchData)
 
+    const getReferences = (tree) => {
+      const hits = tree.specificHits.map(hit => hit.csi.reference);
+      for (const child of Object.values(tree.children)) {
+        hits.push(getReferences(child));
+      }
+      return _.uniqBy(hits.flat(), s => s.slice(0, 32));
+    }
+
+    const references = computed(() => result.tree === null ? [] : getReferences(result.tree));
+
+    const copyReferences = () => {
+      const refs = [...getReferences(result.tree), ...GENERAL_REFERENCES];
+      navigator.clipboard.writeText(refs.join('\n'));
+      copiedToClipboard();
+    }
+
     return {
       id,
       result,
-      isLoading
+      isLoading,
+      references,
+      copyReferences,
+      GENERAL_REFERENCES
     }
   }
 }
@@ -85,5 +125,18 @@ h2 {
 ul {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+footer {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+
+.reference-box {
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: #e9e9e9;
+  padding: 5px;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 </style>

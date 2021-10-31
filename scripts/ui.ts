@@ -13,3 +13,10 @@ export function rejectionToast(reason = 'Unknown Failure.') {
     type: 'is-danger'
   })
 }
+
+export function copiedToClipboard() {
+  ToastProgrammatic.open({
+    message: 'Copied to Clipboard',
+    type: 'is-success'
+  })
+}

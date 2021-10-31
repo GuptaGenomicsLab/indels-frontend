@@ -20,8 +20,7 @@
           <br>
           Subject: <code>{{ hit.subject }}</code>
           <br><br>
-          <!-- todo: switch to dynamic reference -->
-          <i>Reference:</i> <span>Gupta RS et al (2013)</span>
+          <i>Reference:</i> {{shortReference(hit.csi.reference)}}
         </div>
       </div>
     </b-collapse>
@@ -78,14 +77,18 @@ export default {
 
     const open = props.clickable ? ref(false) : false
 
-    // const shortReference = (full: string): string => {
-    //
-    // }
+    const shortReference = (full: string): string => {
+      const segments = full.match(/.+\(\d{4}\)/g);
+      if (segments === null ?? segments.length < 1)
+        return full.slice(0, 32);
+      return segments[0];
+    }
 
     return {
       children,
       node,
-      open
+      open,
+      shortReference
     }
   }
 }
