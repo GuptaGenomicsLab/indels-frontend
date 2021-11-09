@@ -20,3 +20,5 @@ export function copiedToClipboard() {
     type: 'is-success'
   })
 }
+
+export const HOMESCREEN_TEXT_KEY = 'HOMESCREEN_TEXT';

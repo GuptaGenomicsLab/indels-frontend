@@ -41,6 +41,12 @@
               View All Queries
             </NuxtLink>
           </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/site-settings'>
+              <b-icon icon='table' size='md' />
+              Site Settings
+            </NuxtLink>
+          </b-dropdown-item>
         </b-dropdown>
 
         <b-dropdown close-on-click append-to-body position='is-bottom-left'>
