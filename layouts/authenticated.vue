@@ -42,6 +42,12 @@
             </NuxtLink>
           </b-dropdown-item>
           <b-dropdown-item>
+            <NuxtLink to='/bulk-query'>
+              <b-icon icon='stack-overflow' size='md' />
+              Bulk Query
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item>
             <NuxtLink to='/site-settings'>
               <b-icon icon='table' size='md' />
               Site Settings
