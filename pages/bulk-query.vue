@@ -12,7 +12,17 @@
                v-model='form.name'
                required
       />
-      <br>
+
+      <b-field>
+        <b-tag v-for='file of uniqueFiles'
+               :key='file.name'
+               type='is-danger'
+               closable
+               @close='removeFile(file.name)'>
+          {{ file.name }}
+        </b-tag>
+      </b-field>
+
       <b-field :type='error.type' :message='error.message'>
         <b-upload v-model='files'
                   accept='.faa,.fasta'
@@ -24,7 +34,7 @@
         >
           <div class='upload-fill file-pending'>
             <b-icon icon='upload' size='is-large' />
-            <p>Please upload your CSV files.</p>
+            <p>Please upload your genome files.</p>
           </div>
         </b-upload>
       </b-field>
@@ -38,7 +48,7 @@
 </template>
 
 <script>
-import {  reactive, ref } from '@nuxtjs/composition-api'
+import { computed, reactive, ref } from '@nuxtjs/composition-api'
 import { useAxios } from '@/scripts/useHooks'
 
 export default {
@@ -52,8 +62,20 @@ export default {
       name: ''
     })
 
-    const error = reactive({ type: '', message: '' })
+    const uniqueFiles = computed(() => {
+      const unique = []
+      files.value.forEach(file => {
+        if (!unique.find(f => f.name === file.name)) {
+          unique.push(file)
+        }
+      })
+      return unique
+    })
 
+    const error = reactive({ type: '', message: '' })
+    const removeFile = (name) => {
+      files.value = files.value.filter(f => f.name !== name)
+    }
 
     const submit = async function () {
       if (files.value.length < 1) {
@@ -63,20 +85,22 @@ export default {
       }
 
       const formData = new FormData()
-      files.value.forEach((file) => {
+      uniqueFiles.value.forEach((file) => {
         formData.append('files', file)
       })
       formData.append('name', form.name)
 
       const result = await axios.$post('/bulk-query', formData);
-      this.openSuccessToast(result.message);
+      if (result) this.openSuccessToast(result.message);
     }
 
     return {
       submit,
       files,
       form,
-      error
+      error,
+      removeFile,
+      uniqueFiles
     }
   },
   methods: {
