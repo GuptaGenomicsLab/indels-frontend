@@ -16,9 +16,9 @@
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </NuxtLink>
           <br><br>
-          Query: <code>{{ hit.query }}</code>
+          Query:&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ hit.query }}</code>
           <br>
-          Subject: <code>{{ hit.subject }}</code>
+          Subject:&nbsp;&nbsp;<code>{{ hit.subject }}</code>
           <br><br>
           <i>Reference:</i> {{shortReference(hit.csi.reference)}}
         </div>
