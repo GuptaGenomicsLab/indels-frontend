@@ -17,7 +17,7 @@
         >
           <div v-if='file === null' class='upload-fill file-pending'>
             <b-icon icon='upload' size='is-large' />
-            <p>Please upload a genome sequence.<br>Drag and drop your files or click here to upload.</p>
+            <p>Please upload a genome sequence.<br><b>Drag and drop</b> your files or click to <b>browse files</b>.</p>
           </div>
           <div v-else-if='!isValid' class='upload-fill file-error' type='is-danger'>
             <b-icon icon='alert-circle' size='is-large' />
@@ -36,11 +36,8 @@
       </b-field>
       <b-button type='is-success' native-type='submit' size='is-medium' label='Start Query' icon-left='play' expanded />
       <section v-if='showDetails' class='extra-options'>
-        <hr />
+        <hr style="margin-bottom: 3px;"/>
         <h2>Additional Options</h2>
-        <b-field label='Description'>
-          <b-input v-model='form.description' name='description' type='textarea' maxlength='256' />
-        </b-field>
         <b-field label='Genome Type' horizontal>
           <b-select v-model='form.type'>
             <option value='Auto' selected>Auto</option>
@@ -49,9 +46,12 @@
           </b-select>
         </b-field>
         <b-field label='Clinical' horizontal>
-          <b-checkbox v-model='form.clinicalOnly' type='is-info'>
+          <b-checkbox v-model='form.clinicalOnly' type='is-info' disabled>
             Restrict Query to Clinically Important CSIs Only
           </b-checkbox>
+        </b-field>
+        <b-field label='Description' horizontal>
+          <b-input v-model='form.description' name='description' maxlength='64' />
         </b-field>
       </section>
     </form>
