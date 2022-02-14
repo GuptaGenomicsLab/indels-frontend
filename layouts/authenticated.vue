@@ -76,6 +76,23 @@
       </div>
     </nav>
     <Nuxt />
+    <div class='spacer' />
+    <footer>
+      <span class='footer-content'>
+        © Gupta Lab {{new Date().getFullYear()}}
+      </span>
+      <div class='footer-links'>
+        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/support">Support</NuxtLink>
+        <NuxtLink to="/extra/copyright">Copyright</NuxtLink>
+        <NuxtLink to="/extra/disclaimer">Disclaimer</NuxtLink>
+        <NuxtLink to="/extra/privacy">Privacy Policy</NuxtLink>
+      </div>
+      <span class='footer-logo'>
+        McMaster University
+        <img class='footer-logo-img' src='~/assets/img/logo-mcmaster.png' alt='McMaster Logo'/>
+      </span>
+    </footer>
   </div>
 </template>
 
@@ -120,6 +137,8 @@ html, body {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -130,6 +149,61 @@ nav {
   background: linear-gradient($primary, $primary-darker);
   color: white;
 }
+
+.spacer {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 2vh;
+  padding: 2px 10px;
+  //
+  position: fixed;
+  bottom: 0;
+  @include respond-above(lg) {
+    left: 22.5vw;
+    width: 55vw;
+  }
+  @include respond-below(lg) {
+    left: 1vw;
+    width: 96vw;
+  }
+  @include respond-below(sm) {
+    max-height: 4vh;
+  }
+
+  //
+  background-color: #F5F5F5;
+  font-family: 'Roboto', 'Segoe UI Light', sans-serif;
+  font-size: 12px;
+
+  a {
+    margin: auto 5px;
+  }
+
+  .footer-links {
+    @include respond-below(sm) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .footer-logo-img {
+      height: 1.5vh;
+      margin-left: 5px;
+    }
+  }
+}
+
 
 .branding {
   display: flex;
