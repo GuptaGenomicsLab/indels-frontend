@@ -14,7 +14,6 @@
                   rounded
                   expanded
                   drag-drop
-                  required
         >
           <div v-if='file === null' class='upload-fill file-pending'>
             <b-icon icon='upload' size='is-large' />
