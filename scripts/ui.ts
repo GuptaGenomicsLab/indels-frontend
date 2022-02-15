@@ -1,4 +1,4 @@
-import { ToastProgrammatic } from 'buefy'
+import {ToastProgrammatic} from 'buefy'
 
 export function successToast(reason = 'Success.') {
   ToastProgrammatic.open({
@@ -22,3 +22,9 @@ export function copiedToClipboard() {
 }
 
 export const HOMESCREEN_TEXT_KEY = 'HOMESCREEN_TEXT';
+export const LOGIN_TEXT_KEY = 'LOGIN_TEXT';
+export const ABOUT_TEXT_KEY = 'ABOUT_TEXT';
+export const COPYRIGHT_TEXT_KEY = 'COPYRIGHT_TEXT';
+export const DISCLAIMER_TEXT_KEY = 'DISCLAIMER_TEXT';
+export const PRIVACY_TEXT_KEY = 'PRIVACY_TEXT';
+export const SUPPORT_TEXT_KEY = 'SUPPORT_TEXT';
