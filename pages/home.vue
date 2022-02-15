@@ -1,25 +1,27 @@
 <template>
   <main>
-    <section class='content-box' v-html='homescreenText'>
+    <section class='content-box' v-html='homescreenText' />
 
+    <section class='page-nav'>
+      <NuxtLink to='/query'>
+          <b-icon icon='database-search' size='is-large' />
+          <span>Submit a Query</span>
+      </NuxtLink>
+      <NuxtLink to='/results'>
+        <b-icon icon='table-large' size='is-large' />
+        <span>View Past Results</span>
+      </NuxtLink>
     </section>
-
-    <QueryPage :show-details='false' />
-
-    <ResultsPage :show-details='false' />
   </main>
 </template>
 
 <script lang='ts'>
 import { ref, useFetch } from '@nuxtjs/composition-api'
-import QueryPage from '~/pages/query.vue'
-import ResultsPage from '~/pages/results/index.vue'
 import { useAxios } from '@/scripts/useHooks'
 import { HOMESCREEN_TEXT_KEY } from '@/scripts/ui'
 
 export default {
   name: 'HomePage',
-  components: { ResultsPage, QueryPage },
   layout: 'authenticated',
   setup() {
     const axios = useAxios()
@@ -38,6 +40,34 @@ export default {
 }
 </script>
 
-<!--<style scoped>-->
+<style scoped lang='scss'>
+@import 'assets/scss/globals.scss';
 
-<!--</style>-->
+a {
+  background: transparent;
+  border: 1px solid #C4C4C4;
+  border-radius: 1rem;
+  width: 45%;
+  color: black;
+  text-decoration: none;
+
+  @include respond-below(md) {
+    width: 100%;
+  }
+
+  height: 30rem;
+  margin: 2% 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: rgba(196, 196, 196, 0.1);
+  }
+
+  .icon {
+    color: $primary;
+  }
+}
+</style>

@@ -98,6 +98,21 @@ blockquote {
   }
 }
 
+.page-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 3vh auto;
+  @include respond-below(md) {
+    width: 90%;
+    height: 90%;
+  }
+  @include respond-above(md) {
+    width: map-get($breakpoints, md);
+    height: 80%;
+  }
+}
+
 .content-box-lg {
   margin: 3vh auto;
   @include respond-below(xxlg) {
