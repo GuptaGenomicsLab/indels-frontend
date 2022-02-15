@@ -1,13 +1,7 @@
 <template>
   <main>
-    <section class='content-box'>
-      <h1>Welcome to GLIISCEN</h1>
-      <p v-if='homescreenText.length < 1'>
-        The Gupta Lab Indels Identification Service.
-      </p>
-      <p v-else>
-        {{homescreenText}}
-      </p>
+    <section class='content-box' v-html='homescreenText'>
+
     </section>
 
     <QueryPage :show-details='false' />
@@ -29,11 +23,10 @@ export default {
   layout: 'authenticated',
   setup() {
     const axios = useAxios()
-    const homescreenText = ref('')
+    const homescreenText = ref('Loading...')
 
     async function fetchHomescreenText() {
-      const res = await axios.$get(`/content/${HOMESCREEN_TEXT_KEY}`)
-        .catch(() => '') ?? ''
+      const res = await axios.$get(`/content/${HOMESCREEN_TEXT_KEY}`).catch(() => {})
       homescreenText.value = res.value
     }
 

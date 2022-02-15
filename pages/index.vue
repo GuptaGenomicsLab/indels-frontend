@@ -2,41 +2,36 @@
   <main class='index-main'>
     <section class='box-left'>
       <LoginForm v-if='focusLogin' @switch='focusLogin = !focusLogin'/>
-      <RegisterForm v-else @switch='focusLogin = !focusLogin' />
+      <RegisterForm v-else @switch='focusLogin = !focusLogin'/>
     </section>
-    <section class='box-right'>
-      <h1>Identify genomes using conserved signature indels.</h1>
-      <figure class='sample-image'>
-        <figcaption>
-          {{name}}
-        </figcaption>
-        <TreeNode :tree='tree' :clickable='false' />
-      </figure>
-    </section>
+    <section class='box-right' v-html='content'/>
   </main>
 </template>
 
 <script>
 import {ref} from '@vue/composition-api'
-import TreeNode from '@/components/TreeNode'
+import {useFetch} from "@nuxtjs/composition-api";
 import LoginForm from '@/components/LoginForm'
 import RegisterForm from '@/components/RegisterForm'
-
-const sampleQueries = [
-  {name: 'Enterobacter Soli', fileName: 'EnterobacterSoli'}
-]
+import {useAxios} from "@/scripts/useHooks";
+import {LOGIN_TEXT_KEY} from "@/scripts/ui";
 
 export default {
   name: 'RootPage',
-  components: { TreeNode, LoginForm, RegisterForm },
+  components: {LoginForm, RegisterForm},
   setup() {
     const focusLogin = ref(true);
-    const random = sampleQueries[Math.floor(Math.random() * sampleQueries.length)]
-    const tree = require(`static/queries/${random.fileName}.json`)
+    const axios = useAxios();
+    const content = ref('Loading...');
+
+    useFetch(async () => {
+      const response = await axios.get(`/content/${LOGIN_TEXT_KEY}`).catch(() => {
+      })
+      content.value = response.data.value ?? '<p>Welcome to Indels.com!</p>';
+    })
 
     return {
-      name: random.name,
-      tree,
+      content,
       focusLogin
     }
   }

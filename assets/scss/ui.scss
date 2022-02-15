@@ -17,6 +17,32 @@ h2 {
   line-height: 48px;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+ol {
+  margin: 0.5rem 0;
+  padding: 0 2.5rem;
+}
+
+ul {
+  @extend ol;
+
+  list-style: circle;
+}
+
+blockquote {
+  border-left: 3px solid #757575;
+  background-color: #F5F5F5;
+  padding: 0 1rem;
+  margin: 0.5rem;
+}
+
 .black {
   color: black;
 }

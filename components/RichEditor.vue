@@ -231,28 +231,6 @@ export default {
 .ProseMirror {
   outline: none;
   padding: 2rem;
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.25rem;
-  }
-
-  ol {
-    padding: 0 1rem;
-  }
-  ul {
-    list-style: circle;
-    padding: 0 1rem;
-  }
-
-  blockquote {
-    border-left: 3px solid #757575;
-    background-color: #F5F5F5;
-    padding: 0 1rem;
-  }
 }
 
 .bubble-menu {

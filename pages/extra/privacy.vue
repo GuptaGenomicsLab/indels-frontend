@@ -8,7 +8,7 @@
 import {useFetch} from "@nuxtjs/composition-api";
 import {ref} from "@vue/composition-api";
 import {useAxios} from "@/scripts/useHooks";
-import {SUPPORT_TEXT_KEY} from "@/scripts/ui";
+import {PRIVACY_TEXT_KEY} from "@/scripts/ui";
 
 export default {
   name: 'SupportPage',
@@ -18,8 +18,8 @@ export default {
     const content = ref('Loading...');
 
     useFetch(async () => {
-        const response = await axios.get(`/content/${SUPPORT_TEXT_KEY}`).catch(() => {})
-        content.value = response.data.value ?? '<p>Not Found. Please contact the site administrator (kantered@mcmaster.ca) if this is an error.</p>';
+      const response = await axios.get(`/content/${PRIVACY_TEXT_KEY}`).catch(() => {})
+      content.value = response.data.value ?? '<p>Not Found.</p>';
     })
 
     return {content}
