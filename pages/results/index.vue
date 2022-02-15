@@ -15,6 +15,7 @@
       v-if='showDetails'
       v-model='activePage'
       :total='matchingRows'
+      :per-page='PAGE_ROWS'
       :range-before='2'
       :range-after='2'
       order='is-centered'

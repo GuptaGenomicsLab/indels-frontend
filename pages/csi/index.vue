@@ -21,6 +21,7 @@
       :total='matchingRows'
       :range-before='2'
       :range-after='2'
+      :per-page='PAGE_ROWS'
       order='is-centered'
     />
   </main>
@@ -68,6 +69,7 @@ export default {
       }))
 
       matchingRows.value = await axios.$get('/csis/count', {params: {search: searchText.value}});
+      console.log(matchingRows.value)
     }
 
     const {fetch} = useFetch(fetchActiveData)
