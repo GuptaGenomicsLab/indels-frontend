@@ -3,6 +3,7 @@
     <header>
       <h1> CSI Database </h1>
       <div class='control-box'>
+        <p>({{matchingRows}} matching CSIs)</p>
         <NuxtLink to='/csi/create'>
           <b-button type='is-info' icon-left='chart-box-plus-outline'>Add CSI</b-button>
         </NuxtLink>
