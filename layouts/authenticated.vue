@@ -14,7 +14,7 @@
       <div class='icons'>
         <b-dropdown close-on-click append-to-body position='is-bottom-left'>
           <template #trigger>
-            <b-icon v-if='$store.$auth.user.role === "ADMIN"'  icon='cog-outline' size='sm' />
+            <b-icon v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)'  icon='cog-outline' size='sm' />
           </template>
 
           <b-dropdown-item custom>
@@ -23,13 +23,13 @@
               Manage CSIs
             </NuxtLink>
           </b-dropdown-item>
-          <b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
             <NuxtLink to='/user'>
               <b-icon icon='account-box-multiple' size='md' />
               Manage Users
             </NuxtLink>
           </b-dropdown-item>
-          <b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
             <NuxtLink to='/import'>
               <b-icon icon='database' size='md' />
               Bulk Edit CSIs
@@ -47,7 +47,7 @@
               Bulk Query
             </NuxtLink>
           </b-dropdown-item>
-          <b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
             <NuxtLink to='/site-settings'>
               <b-icon icon='table' size='md' />
               Site Settings

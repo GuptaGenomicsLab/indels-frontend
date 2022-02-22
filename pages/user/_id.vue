@@ -22,7 +22,7 @@
       <b-field horizontal label='Role'>
         <b-select v-model="form.role" placeholder='Select a Role' expanded icon='account-supervisor'>
           <option value='USER'>User</option>
-          <option value='CSI' disabled>CSI View Only (unavailable)</option>
+          <option value='MANAGER'>Manager</option>
           <option value='ADMIN'>Admin</option>
         </b-select>
       </b-field>
@@ -64,8 +64,8 @@ export default {
     }
 
     const submit = async function() {
-      await axios.$post(`/user/${id}/edit`, form);
-      this.successToast(`Edit successful.`)
+      if (await axios.$post(`/user/${id}/edit`, form))
+        this.successToast(`Edit successful.`)
     }
 
     useFetch(fetchData)
