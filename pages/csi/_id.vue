@@ -29,6 +29,9 @@
       <b-field horizontal label='Reference'>
         <b-input v-model='form.reference' />
       </b-field>
+      <b-field horizontal label='Weight'>
+        <b-slider v-model='form.weight' :tooltip='false' :min='0' :max='1' indicator rounded/>
+      </b-field>
       <b-field horizontal label='Private'>
         <b-checkbox v-model='form.private' />
       </b-field>
@@ -62,6 +65,7 @@ const formDefaults = {
   eValue: '',
   proteinName: '',
   reference: '',
+  weight: 0,
   private: false,
   clinical: false,
   hidden: false
