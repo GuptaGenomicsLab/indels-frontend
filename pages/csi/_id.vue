@@ -30,7 +30,7 @@
         <b-input v-model='form.reference' />
       </b-field>
       <b-field horizontal label='Weight'>
-        <b-slider v-model='form.weight' :tooltip='false' :min='0' :max='1' indicator rounded/>
+        <b-slider v-model='form.weight' :tooltip='false' :min='0' :max='1' :step='0.01' type='is-info' indicator lazy/>
       </b-field>
       <b-field horizontal label='Private'>
         <b-checkbox v-model='form.private' />
