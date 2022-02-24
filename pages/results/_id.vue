@@ -79,21 +79,19 @@ export default {
     const fetchData = async () => {
       const query = await axios.$get(`/blast/query/${id.value}`)
       const { status } = query
-      if (status === 'queued') {
+      if (status === 'queued')
         result.header = 'Query is waiting to begin (queued).'
-        if (status === 'queued' || status === 'ongoing') {
-          await waitForCompletion()
-          return fetchData()
-        }
 
-        if (status === 'completed-nr' || status === 'null') {
-          result.header = 'Query has no result or failed to complete.'
-        } else {
-          result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
-          result.identified = query.data.identified
-          result.tree = JSON.parse(query.data.tree)
-          result.clinical = query.data.clinical
-        }
+      if (status === 'queued' || status === 'ongoing') {
+        await waitForCompletion()
+        return fetchData()
+      } else if (status === 'completed-nr' || status === 'null') {
+        result.header = 'Query has no result or failed to complete.'
+      } else {
+        result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
+        result.identified = query.data.identified
+        result.tree = JSON.parse(query.data.tree)
+        result.clinical = query.data.clinical
       }
     }
 
