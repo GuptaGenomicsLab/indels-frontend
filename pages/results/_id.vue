@@ -62,10 +62,8 @@ export default {
         const url = `${axios.defaults.baseURL}/blast/query-progress/${id.value}`
         isLoading.value = true
         const event = new EventSource(url, { withCredentials: true })
-        event.onopen = () => {
-          result.header = 'Query is in progress. Please wait.'
-        }
         event.onmessage = (message) => {
+          result.header = 'Query is in progress. Please wait.'
           if (message.data.includes('Completed.')) {
             isLoading.value = false
             event.close()
