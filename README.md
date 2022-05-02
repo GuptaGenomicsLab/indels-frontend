@@ -1,4 +1,4 @@
-# indels-frontend
+# Applied Indels
 
 ## Build Setup
 

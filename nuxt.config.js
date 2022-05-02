@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Applied Indels | Gupta Lab',
+    title: 'Applied Indels - Gupta Lab',
     htmlAttrs: {
       lang: 'en'
     },
