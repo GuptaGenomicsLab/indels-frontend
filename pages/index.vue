@@ -27,7 +27,7 @@ export default {
     useFetch(async () => {
       const response = await axios.get(`/content/${LOGIN_TEXT_KEY}`).catch(() => {
       })
-      content.value = response.data.value ?? '<p>Welcome to Indels.com!</p>';
+      content.value = response.data.value ?? '<p>Welcome to AppIndels.com!</p>';
     })
 
     return {

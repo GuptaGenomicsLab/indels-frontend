@@ -3,7 +3,7 @@
     <nav class='navbar'>
       <div class='branding'>
         <DnaIcon size='none' animated />
-        <h2>gliiscen</h2>
+        <h2>AppIndels</h2>
       </div>
       <div class='links'>
         <NuxtLink to='/home'>Home</NuxtLink>
