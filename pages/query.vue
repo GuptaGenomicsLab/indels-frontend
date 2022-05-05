@@ -68,7 +68,7 @@ export default {
   props: {
     showDetails: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   setup() {
