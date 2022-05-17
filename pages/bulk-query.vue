@@ -25,7 +25,7 @@
 
       <b-field :type='error.type' :message='error.message'>
         <b-upload v-model='files'
-                  accept='.faa,.fasta'
+                  accept='.faa,.fasta,.FAA,.FASTA'
                   multiple
                   rounded
                   expanded
