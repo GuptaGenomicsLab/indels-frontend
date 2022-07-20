@@ -15,7 +15,7 @@
             {{ hit.indelInfo.size }} aa {{ hit.indelInfo.type }}
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </NuxtLink>
-          <span v-else class='nuxt-link'>
+          <span v-else style='color: #485fc7; cursor: pointer;'>
             {{ hit.indelInfo.size }} aa {{ hit.indelInfo.type }}
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </span>
