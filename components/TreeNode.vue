@@ -11,10 +11,14 @@
 
       <div class='card-container'>
         <div v-for='hit of node.specificHits.value' :key='hit.subject' class='card-content'>
-          <NuxtLink :to='`/csi/${hit.csi.id}`'>
-            {{ hit.indelInfo.size }} aa insert
+          <NuxtLink v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)' :to='`/csi/${hit.csi.id}`'>
+            {{ hit.indelInfo.size }} aa {{ hit.indelInfo.type }}
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </NuxtLink>
+          <span v-else class='nuxt-link'>
+            {{ hit.indelInfo.size }} aa {{ hit.indelInfo.type }}
+            <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
+          </span>
           <br><br>
           Query:&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ hit.query }}</code>
           <br>
