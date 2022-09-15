@@ -28,7 +28,9 @@ import { useAxios } from '@/scripts/useHooks'
 const columns = [
   { field: 'active', label: 'Active' },
   { field: 'username', label: 'Username' },
+  { field: 'fullName', label: 'Full Name' },
   { field: 'email', label: 'Email' },
+  { field: 'position', label: 'Position' },
   { field: 'institution', label: 'Institution' },
   { field: 'role', label: 'Role' }
 ]
