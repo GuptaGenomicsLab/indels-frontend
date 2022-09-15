@@ -12,7 +12,7 @@
     <form @submit.prevent='submit()'>
       <b-field :type='error.type' :message='error.message'>
         <b-upload v-model='file'
-                  accept='.faa,.fasta'
+                  accept='.faa,.fasta,.FAA,.FASTA'
                   rounded
                   expanded
                   drag-drop
@@ -70,7 +70,7 @@ export default {
   props: {
     showDetails: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   setup() {
@@ -83,7 +83,7 @@ export default {
       type: 'Auto',
       clinicalOnly: false
     })
-    const isValid = computed(() => file.value.name.endsWith('.faa') || file.value.name.endsWith('.fasta'))
+    const isValid = computed(() => file.value.name.toLowerCase().endsWith('.faa') || file.value.name.toLowerCase().endsWith('.fasta'))
     const error = reactive({ type: '', message: '' })
 
     const submit = async () => {

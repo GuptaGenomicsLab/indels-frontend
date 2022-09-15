@@ -1,44 +1,44 @@
 <template>
-    <main class='content-box'>
-      <article>
-        <b-loading v-model='isLoading' :can-cancel='true' />
-        <h1>Query Result: {{result.header}}</h1>
-        <h2>CSIs Present For:</h2>
-        <ul>
-          <li v-for='identification of result.identified' :key='identification'>{{identification}}</li>
-        </ul>
-        <p v-if='result.clinical'>Searched for Clinical CSIs only.</p>
-        <hr>
-        <figure>
-          <TreeNode v-if='result.tree !== null' :tree='result.tree'/>
-        </figure>
-      </article>
-      <footer class='content-box'>
-        <b>CSI References:</b>
-        <div class='reference-box'>
-          <p v-for='reference in references' :key='reference'>{{reference}}</p>
-        </div>
-        <b>General References:</b>
-        <div class='reference-box'>
-          <p v-for='reference in GENERAL_REFERENCES' :key='reference'>{{reference}}</p>
-        </div>
-        <br>
-        <b-button @click='copyReferences' label='Copy References to Clipboard' expanded />
-      </footer>
-    </main>
+  <main class='content-box'>
+    <article>
+      <b-loading v-model='isLoading' :can-cancel='true' />
+      <h1>Query Result: {{ result.header }}</h1>
+      <h2>CSIs Present For:</h2>
+      <ul>
+        <li v-for='identification of result.identified' :key='identification'>{{ identification }}</li>
+      </ul>
+      <p v-if='result.clinical'>Searched for Clinical CSIs only.</p>
+      <hr>
+      <figure>
+        <TreeNode v-if='result.tree !== null' :tree='result.tree' />
+      </figure>
+    </article>
+    <footer class='content-box'>
+      <b>CSI References:</b>
+      <div class='reference-box'>
+        <p v-for='reference in references' :key='reference'>{{ reference }}</p>
+      </div>
+      <b>General References:</b>
+      <div class='reference-box'>
+        <p v-for='reference in GENERAL_REFERENCES' :key='reference'>{{ reference }}</p>
+      </div>
+      <br>
+      <b-button label='Copy References to Clipboard' expanded @click='copyReferences' />
+    </footer>
+  </main>
 </template>
 
 <script>
 import { computed, reactive, ref, useFetch, useRoute } from '@nuxtjs/composition-api'
-import _ from 'lodash';
+import _ from 'lodash'
 import { useAxios } from '@/scripts/useHooks'
 import TreeNode from '@/components/TreeNode'
-import {copiedToClipboard} from '@/scripts/ui'
+import { copiedToClipboard } from '@/scripts/ui'
 
 const GENERAL_REFERENCES = [
   'Gupta, R.S. (2014). Identification of conserved indels that are useful for classification and evolutionary studies. In Methods in Microbiology, M.Goodfellow, I.Sutcliffe, and J.Chun, eds. (Oxford: Academic Press), pp. 153-182.',
   'Gupta, R.S. (2016). Impact of genomics on the understanding of microbial evolution and classification: the importance of Darwin\'s views on classification. FEMS Microbiol Rev. 40, 520-553.'
-];
+]
 
 export default {
   name: 'ResultPage',
@@ -63,6 +63,7 @@ export default {
         isLoading.value = true
         const event = new EventSource(url, { withCredentials: true })
         event.onmessage = (message) => {
+          result.header = 'Query is in progress. Please wait.'
           if (message.data.includes('Completed.')) {
             isLoading.value = false
             event.close()
@@ -76,11 +77,13 @@ export default {
     const fetchData = async () => {
       const query = await axios.$get(`/blast/query/${id.value}`)
       const { status } = query
-      if (status === 'ongoing') {
+      if (status === 'queued')
+        result.header = 'Query is waiting to begin (queued).'
+
+      if (status === 'queued' || status === 'ongoing') {
         await waitForCompletion()
         return fetchData()
-      }
-      if (status === 'completed-nr' || status === 'null') {
+      } else if (status === 'completed-nr' || status === 'null') {
         result.header = 'Query has no result or failed to complete.'
       } else {
         result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
@@ -93,19 +96,19 @@ export default {
     useFetch(fetchData)
 
     const getReferences = (tree) => {
-      const hits = tree.specificHits.map(hit => hit.csi.reference);
+      const hits = tree.specificHits.map(hit => hit.csi.reference)
       for (const child of Object.values(tree.children)) {
-        hits.push(getReferences(child));
+        hits.push(getReferences(child))
       }
-      return _.uniqBy(hits.flat(), s => s.slice(0, 32));
+      return _.uniqBy(hits.flat(), s => s.slice(0, 32))
     }
 
-    const references = computed(() => result.tree === null ? [] : getReferences(result.tree));
+    const references = computed(() => result.tree === null ? [] : getReferences(result.tree))
 
     const copyReferences = () => {
-      const refs = [...getReferences(result.tree), ...GENERAL_REFERENCES];
-      navigator.clipboard.writeText(refs.join('\n'));
-      copiedToClipboard();
+      const refs = [...getReferences(result.tree), ...GENERAL_REFERENCES]
+      navigator.clipboard.writeText(refs.join('\n'))
+      copiedToClipboard()
     }
 
     return {

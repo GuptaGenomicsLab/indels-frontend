@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'indels-frontend',
+    title: 'Applied Indels - Gupta Lab',
     htmlAttrs: {
       lang: 'en'
     },
@@ -62,7 +62,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://api.indels.com',
+    baseURL: process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : 'https://api.appindels.com',
     credentials: true
   },
 
