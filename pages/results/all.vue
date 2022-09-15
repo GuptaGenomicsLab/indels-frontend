@@ -50,7 +50,6 @@ export default {
       { field: 'username', label: 'User'},
       { field: 'fileName', label: 'File Name' },
       { field: 'result', label: 'Result' },
-      { field: 'description', label: 'Description' },
       { field: 'createdAt', label: 'Started' },
     ]
 
