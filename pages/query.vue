@@ -5,6 +5,8 @@
       Start a new query.
       Simply upload a genome, and press start.
       <!--      For more complex needs, customization options are available below.-->
+      <br>
+      Results will be available for at least 30 days, but the genome will be deleted after analysis completes.
     </p>
 
     <form @submit.prevent='submit()'>
@@ -34,7 +36,7 @@
           </div>
         </b-upload>
       </b-field>
-      <b-button type='is-success' native-type='submit' size='is-medium' label='Start Query' icon-left='play' expanded />
+      <b-button type='is-success' native-type='submit' size='is-medium' label='Start Analysis' icon-left='play' expanded />
       <section v-if='showDetails' class='extra-options'>
         <hr style="margin-bottom: 3px;"/>
         <h2>Additional Options</h2>

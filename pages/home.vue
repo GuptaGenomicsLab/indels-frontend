@@ -10,6 +10,8 @@
       <NuxtLink to='/results'>
         <b-icon icon='table-large' size='is-large' />
         <span>View Past Results</span>
+        <br>
+        <span style='font-size: 8px'>Results will be available for at least 30 days.</span>
       </NuxtLink>
     </section>
   </main>

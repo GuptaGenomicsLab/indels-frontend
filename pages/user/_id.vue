@@ -16,6 +16,15 @@
       <b-field horizontal label='Email'>
         <b-input v-model='form.email' />
       </b-field>
+      <b-field horizontal label='Prefix/Title'>
+        <b-input v-model='form.prefix' />
+      </b-field>
+      <b-field horizontal label='Full Name'>
+        <b-input v-model='form.fullName' />
+      </b-field>
+      <b-field horizontal label='Position'>
+        <b-input v-model='form.position' />
+      </b-field>
       <b-field horizontal label='Institution'>
         <b-input v-model='form.institution' />
       </b-field>
@@ -41,6 +50,9 @@ const formDefaults = {
   active: false,
   username: '',
   email: '',
+  prefix: '',
+  fullName: '',
+  position: '',
   institution: '',
   role: ''
 }

@@ -34,8 +34,30 @@
         />
       </b-field>
       <b-field>
+        <b-select v-model='formData.prefix'
+                 placeholder='Title'
+                 style='float: left; width: 10%;'
+        >
+          <option value='Mr.'>Mr.</option>
+          <option value='Mrs.'>Mrs.</option>
+          <option value='Ms.'>Ms.</option>
+          <option value='Dr.'>Dr.</option>
+          <option value='Prof.'>Prof.</option>
+        </b-select>
+        <b-input v-model='formData.fullName'
+                 placeholder='Full Name'
+                 icon='account-box'
+        />
+      </b-field>
+      <b-field>
+        <b-input v-model='formData.position'
+                 placeholder='Position'
+                 icon='school'
+        />
+      </b-field>
+      <b-field>
         <b-input v-model='formData.institution'
-                 placeholder='Institution'
+                 placeholder='Institution / Department'
                  icon='school'
         />
       </b-field>
@@ -64,6 +86,9 @@ export default {
       password: '',
       passwordConfirm: '',
       email: '',
+      prefix: '',
+      fullName: '',
+      position: '',
       institution: ''
     })
 
