@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref, useFetch, useRouter, watch } from '@nuxtjs/composition-api'
+import { ref, watch } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 
 export default {
@@ -73,7 +73,7 @@ export default {
       matchingRows.value = await axios.$get('/blast/count', {params: {search: searchText.value}});
     }
 
-    const {fetch} = useFetch(fetchActiveData)
+    const {fetch} = useLazyFetch(fetchActiveData)
     watch(activePage, fetch)
     watch(searchText, fetch)
 

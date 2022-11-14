@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import {useFetch} from "@nuxtjs/composition-api";
-import {ref} from "@vue/composition-api";
+import {ref} from "vue";
 import {useAxios} from "@/scripts/useHooks";
 import {DISCLAIMER_TEXT_KEY} from "@/scripts/ui";
 
@@ -17,7 +16,7 @@ export default {
     const axios = useAxios();
     const content = ref('Loading...');
 
-    useFetch(async () => {
+    useLazyFetch(async () => {
       const response = await axios.get(`/content/${DISCLAIMER_TEXT_KEY}`).catch(() => {})
       content.value = response.data.value ?? '<p>Not Found.</p>';
     })

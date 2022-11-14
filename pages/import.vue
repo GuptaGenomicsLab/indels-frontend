@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref, useRouter, watch } from '@nuxtjs/composition-api'
+import { computed, reactive, ref, watch } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 
 export default {

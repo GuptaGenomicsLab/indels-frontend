@@ -33,7 +33,7 @@
 </template>
 
 <script lang='ts'>
-import { computed, ref } from '@nuxtjs/composition-api'
+import { computed, ref } from 'vue'
 import { Indel } from '~/scripts/indel.type'
 
 type Node = {

@@ -9,8 +9,7 @@
 </template>
 
 <script>
-import {ref} from '@vue/composition-api'
-import {useFetch} from "@nuxtjs/composition-api";
+import {ref} from 'vue'
 import LoginForm from '@/components/LoginForm'
 import RegisterForm from '@/components/RegisterForm'
 import {useAxios} from "@/scripts/useHooks";
@@ -24,7 +23,7 @@ export default {
     const axios = useAxios();
     const content = ref('Loading...');
 
-    useFetch(async () => {
+    useLazyFetch(async () => {
       const response = await axios.get(`/content/${LOGIN_TEXT_KEY}`).catch(() => {
       })
       content.value = response.data.value ?? '<p>Welcome to AppIndels.com!</p>';

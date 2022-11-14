@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { reactive } from '@nuxtjs/composition-api'
+import { reactive } from 'vue'
 import DnaIcon from '@/components/DnaIcon'
 import { useAxios } from '@/scripts/useHooks'
 import { successToast } from '@/scripts/ui'

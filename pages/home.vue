@@ -18,7 +18,7 @@
 </template>
 
 <script lang='ts'>
-import { ref, useFetch } from '@nuxtjs/composition-api'
+import { ref } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 import { HOMESCREEN_TEXT_KEY } from '@/scripts/ui'
 
@@ -34,7 +34,7 @@ export default {
       homescreenText.value = res.value
     }
 
-    useFetch(fetchHomescreenText)
+    useLazyFetch(fetchHomescreenText)
     return {
       homescreenText
     }

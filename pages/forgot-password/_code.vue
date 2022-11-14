@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { reactive, useRoute, useRouter } from '@nuxtjs/composition-api'
+import { reactive } from 'vue'
 import DnaIcon from '@/components/DnaIcon'
 import { useAxios } from '@/scripts/useHooks'
 import { rejectionToast, successToast } from '@/scripts/ui'

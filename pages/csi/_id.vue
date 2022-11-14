@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { reactive, useFetch, useRoute, useRouter } from '@nuxtjs/composition-api'
+import { reactive } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 
 const formDefaults = {
@@ -110,7 +110,7 @@ export default {
     }
 
     if (isEditing) {
-      useFetch(fetchData)
+      useLazyFetch(fetchData)
     }
 
     return {

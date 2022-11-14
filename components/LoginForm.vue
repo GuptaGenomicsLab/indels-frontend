@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { reactive } from '@nuxtjs/composition-api'
+import { reactive } from 'vue'
 import DnaIcon from '@/components/DnaIcon'
 import { useAuth } from '@/scripts/useHooks'
 

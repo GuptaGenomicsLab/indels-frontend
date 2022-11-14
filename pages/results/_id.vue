@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref, useFetch, useRoute } from '@nuxtjs/composition-api'
+import { computed, reactive, ref } from 'vue'
 import _ from 'lodash'
 import { useAxios } from '@/scripts/useHooks'
 import TreeNode from '@/components/TreeNode'
@@ -93,7 +93,7 @@ export default {
       }
     }
 
-    useFetch(fetchData)
+    useLazyFetch(fetchData)
 
     const getReferences = (tree) => {
       const hits = tree.specificHits.map(hit => hit.csi.reference)

@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import {reactive, useFetch} from '@nuxtjs/composition-api'
+import {reactive} from 'vue'
 import {useAxios} from '@/scripts/useHooks'
 import {
   ABOUT_TEXT_KEY,
@@ -88,7 +88,7 @@ export default {
       await axios.$post(`/content/${name}`, {value});
     }
 
-    useFetch(() => {
+    useLazyFetch(() => {
       fetchContentText('loginText', LOGIN_TEXT_KEY);
       fetchContentText('homescreenText', HOMESCREEN_TEXT_KEY);
       fetchContentText('aboutText', ABOUT_TEXT_KEY);

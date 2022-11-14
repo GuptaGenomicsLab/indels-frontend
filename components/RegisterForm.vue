@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { reactive, toRaw } from '@nuxtjs/composition-api'
+import { reactive, toRaw } from 'vue'
 import DnaIcon from '@/components/DnaIcon'
 import { rejectionToast, successToast } from '@/scripts/ui'
 import { useAxios } from '@/scripts/useHooks'
