@@ -29,7 +29,7 @@
         />
       </template>
       <div class='interpreting-box'>
-        <span v-html='interpretingResultsDropdown' />
+        <span v-html='interpretingResultsContent' />
       </div>
     </b-collapse>
 
@@ -144,6 +144,7 @@ export default {
       result,
       isLoading,
       interpretingResultsDropdown,
+      interpretingResultsContent,
       references,
       copyReferences,
       GENERAL_REFERENCES
