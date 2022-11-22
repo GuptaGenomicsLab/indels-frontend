@@ -28,8 +28,8 @@
           :icon-right='interpretingResultsDropdown ? "chevron-up" : "chevron-down"'
         />
       </template>
-      <div class='interpreting-box' v-html='interpretingResultsDropdown'>
-        Content Todo
+      <div class='interpreting-box'>
+        <span v-html='interpretingResultsDropdown' />
       </div>
     </b-collapse>
 
