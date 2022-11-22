@@ -28,7 +28,7 @@
           :icon-right='interpretingResultsDropdown ? "chevron-up" : "chevron-down"'
         />
       </template>
-      <div class='interpreting-box'>
+      <div class='interpreting-box' v-html='interpretingResultsDropdown'>
         Content Todo
       </div>
     </b-collapse>
@@ -53,7 +53,8 @@ import { computed, reactive, ref } from 'vue'
 import _ from 'lodash'
 import { useAxios } from '@/scripts/useHooks'
 import TreeNode from '@/components/TreeNode'
-import { copiedToClipboard } from '@/scripts/ui'
+import { copiedToClipboard, INTERPRETATION_TEXT_KEY } from '@/scripts/ui'
+
 
 const GENERAL_REFERENCES = [
   'Gupta, R.S. (2014). Identification of conserved indels that are useful for classification and evolutionary studies. In Methods in Microbiology, M.Goodfellow, I.Sutcliffe, and J.Chun, eds. (Oxford: Academic Press), pp. 153-182.',
@@ -131,6 +132,12 @@ export default {
       navigator.clipboard.writeText(refs.join('\n'))
       copiedToClipboard()
     }
+
+    const interpretingResultsContent = ref('Loading...');
+    useLazyFetch(async () => {
+      const response = await axios.get(`/content/${INTERPRETATION_TEXT_KEY}`).catch(() => {})
+      interpretingResultsContent.value = response.data.value ?? '<p>Not Found. Please contact the site administrator (kantered@mcmaster.ca) if this is an error.</p>';
+    })
 
     return {
       id,

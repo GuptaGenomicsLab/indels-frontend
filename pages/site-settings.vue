@@ -23,6 +23,11 @@
       <b-button label='Save' @click='setContentText(ABOUT_TEXT_KEY, pageContents.aboutText)'/>
     </section>
     <section>
+      <h2>Interpreting Your Results Text</h2>
+      <rich-editor v-model='pageContents.aboutText'/>
+      <b-button label='Save' @click='setContentText(INTERPRETATION_TEXT_KEY, pageContents.interpretationText)'/>
+    </section>
+    <section>
       <h2>Submit CSI Info</h2>
       <rich-editor v-model='pageContents.submitCsiInfoText'/>
       <b-button label='Save' @click='setContentText(SUBMIT_TEXT_KEY, pageContents.submitCsiInfoText)'/>
@@ -61,7 +66,8 @@ import {
   HOMESCREEN_TEXT_KEY,
   LOGIN_TEXT_KEY,
   PRIVACY_TEXT_KEY,
-  SUPPORT_TEXT_KEY
+  SUPPORT_TEXT_KEY,
+  INTERPRETATION_TEXT_KEY
 } from '@/scripts/ui'
 import RichEditor from "@/components/RichEditor";
 
@@ -81,7 +87,8 @@ export default {
       copyrightText: '',
       disclaimerText: '',
       privacyText: '',
-      supportText: ''
+      supportText: '',
+      interpretationText: ''
     });
 
     async function fetchContentText(pageContentsName, databaseKey) {
@@ -104,6 +111,7 @@ export default {
       fetchContentText('disclaimerText', DISCLAIMER_TEXT_KEY);
       fetchContentText('privacyText', PRIVACY_TEXT_KEY);
       fetchContentText('supportText', SUPPORT_TEXT_KEY);
+      fetchContentText('interpretationText', INTERPRETATION_TEXT_KEY);
     })
 
     return {
@@ -116,7 +124,8 @@ export default {
       HOMESCREEN_TEXT_KEY,
       LOGIN_TEXT_KEY,
       PRIVACY_TEXT_KEY,
-      SUPPORT_TEXT_KEY
+      SUPPORT_TEXT_KEY,
+      INTERPRETATION_TEXT_KEY
     }
   }
 }
