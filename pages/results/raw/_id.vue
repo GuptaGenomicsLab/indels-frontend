@@ -2,37 +2,20 @@
   <main class='content-box'>
     <article>
       <b-loading v-model='isLoading' :can-cancel='true' />
-      <h1>Query Result: {{ result.header }}</h1>
-      <NuxtLink v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)' :to='`/results/raw/${id}`' style='float: right;'>
-        <b-button label='View Raw Tree' type='is-primary is-light'/>
+      <h1>Unfiltered Results: {{ result.header }}</h1>
+      <NuxtLink v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)' :to='`/results/${id}`' style='float: right;'>
+        <b-button label='View Filtered Tree' type='is-primary is-light'/>
       </NuxtLink>
-      <h2>CSIs Present For:</h2>
+      <h2>Identified Taxa Meeting Threshold:</h2>
       <ul>
         <li v-for='identification of result.identified' :key='identification'>{{ identification }}</li>
       </ul>
       <p v-if='result.clinical'>Searched for Clinical CSIs only.</p>
       <hr>
       <figure>
-        <TreeNode v-if='result.tree !== null' :tree='result.tree' />
+        <TreeNode v-if='result.rawTree !== null' :tree='result.rawTree' />
       </figure>
     </article>
-    <br><br>
-    <b-collapse v-model='interpretingResultsDropdown' animation='slide'>
-      <template #trigger>
-        <b-button
-          label='Interpreting Your Result'
-          type='is-light'
-          style='font-weight: bold; font-size: 1.25em; justify-content: left'
-          expanded
-          icon-left='help-circle'
-          :icon-right='interpretingResultsDropdown ? "chevron-up" : "chevron-down"'
-        />
-      </template>
-      <div class='interpreting-box'>
-        Content Todo
-      </div>
-    </b-collapse>
-
     <footer class='content-box'>
       <b>CSI References:</b>
       <div class='reference-box'>
@@ -72,10 +55,10 @@ export default {
       header: 'Loading...',
       identified: [],
       tree: null,
+      rawTree: null,
       clinical: false
     })
     const isLoading = ref(false)
-    const interpretingResultsDropdown = ref(false);
 
     const waitForCompletion = () => {
       return new Promise((resolve) => {
@@ -110,6 +93,7 @@ export default {
         result.header = query.data.fileName.split('.').slice(0, -1).join(' ')
         result.identified = query.data.identified
         result.tree = JSON.parse(query.data.tree)
+        result.rawTree = JSON.parse(query.data.rawTree)
         result.clinical = query.data.clinical
       }
     }
@@ -124,10 +108,10 @@ export default {
       return _.uniqBy(hits.flat(), s => s.slice(0, 32))
     }
 
-    const references = computed(() => result.tree === null ? [] : getReferences(result.tree))
+    const references = computed(() => result.rawTree === null ? [] : getReferences(result.rawTree))
 
     const copyReferences = () => {
-      const refs = [...getReferences(result.tree), ...GENERAL_REFERENCES]
+      const refs = [...getReferences(result.rawTree), ...GENERAL_REFERENCES]
       navigator.clipboard.writeText(refs.join('\n'))
       copiedToClipboard()
     }
@@ -136,7 +120,6 @@ export default {
       id,
       result,
       isLoading,
-      interpretingResultsDropdown,
       references,
       copyReferences,
       GENERAL_REFERENCES

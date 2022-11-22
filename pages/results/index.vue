@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 
 export default {
@@ -74,8 +74,8 @@ export default {
     }
 
     const {fetch} = useLazyFetch(fetchActiveData)
-    watch(activePage, fetch)
-    watch(searchText, fetch)
+    watchEffect(activePage, fetch)
+    watchEffect(searchText, fetch)
 
     const handleClick = (row) => {
       router.push({path: row.url})

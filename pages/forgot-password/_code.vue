@@ -52,7 +52,7 @@ export default {
       if (formData.password !== formData.passwordConfirm)
         return rejectionToast('Password and confirm password fields must match.')
 
-      const res = await axios.$post(`/user/reset/${route.value.params.code}`, {
+      const res = await axios.$post(`/user/reset/${route.params.code}`, {
         password: formData.password
       })
       if (res) {

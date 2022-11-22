@@ -20,7 +20,7 @@ export default {
     const axios = useAxios()
     const success = ref(false)
 
-    const code = route.value.params.code
+    const code = route.params.code
 
     useLazyFetch(async () => {
       const res = await axios.$get(`/user/verify/${code}`)

@@ -64,7 +64,7 @@ export default {
     const axios = useAxios()
     const route = useRoute()
 
-    const id = route.value.params.id ?? ''
+    const id = route.params.id ?? ''
 
     const form = reactive({ ...formDefaults })
 

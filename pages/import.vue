@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { computed, reactive, ref, watch } from 'vue'
+import { computed, reactive, ref, watchEffect } from 'vue'
 import { useAxios } from '@/scripts/useHooks'
 
 export default {
@@ -82,7 +82,7 @@ export default {
     const isValid = computed(() => file?.value?.name.endsWith('.csv') ?? false)
     const error = reactive({ type: '', message: '' })
 
-    watch(isValid, () => {
+    watchEffect(isValid, () => {
       if (isValid) {
         error.message = ''
       }

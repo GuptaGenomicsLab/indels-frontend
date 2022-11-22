@@ -78,7 +78,7 @@ export default {
     const axios = useAxios()
     const route = useRoute()
     const router = useRouter()
-    const id = route.value.params.id ?? ''
+    const id = route.params.id ?? ''
     const isEditing = id.length > 8 && id !== 'create'
     const header = isEditing ? 'Edit Existing CSI' : 'Create a New CSI'
 
