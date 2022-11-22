@@ -23,6 +23,11 @@
       <b-button label='Save' @click='setContentText(ABOUT_TEXT_KEY, pageContents.aboutText)'/>
     </section>
     <section>
+      <h2>Submit CSI Info</h2>
+      <rich-editor v-model='pageContents.submitCsiInfoText'/>
+      <b-button label='Save' @click='setContentText(SUBMIT_TEXT_KEY, pageContents.submitCsiInfoText)'/>
+    </section>
+    <section>
       <h2>Copyright Text</h2>
       <rich-editor v-model='pageContents.copyrightText'/>
       <b-button label='Save' @click='setContentText(COPYRIGHT_TEXT_KEY, pageContents.copyrightText)'/>
@@ -50,6 +55,7 @@ import {reactive} from 'vue'
 import {useAxios} from '@/scripts/useHooks'
 import {
   ABOUT_TEXT_KEY,
+  SUBMIT_TEXT_KEY,
   COPYRIGHT_TEXT_KEY,
   DISCLAIMER_TEXT_KEY,
   HOMESCREEN_TEXT_KEY,
@@ -71,6 +77,7 @@ export default {
       loginText: '',
       homescreenText: '',
       aboutText: '',
+      submitCsiInfoText: '',
       copyrightText: '',
       disclaimerText: '',
       privacyText: '',
@@ -92,6 +99,7 @@ export default {
       fetchContentText('loginText', LOGIN_TEXT_KEY);
       fetchContentText('homescreenText', HOMESCREEN_TEXT_KEY);
       fetchContentText('aboutText', ABOUT_TEXT_KEY);
+      fetchContentText('submitCsiInfoText', SUBMIT_TEXT_KEY);
       fetchContentText('copyrightText', COPYRIGHT_TEXT_KEY);
       fetchContentText('disclaimerText', DISCLAIMER_TEXT_KEY);
       fetchContentText('privacyText', PRIVACY_TEXT_KEY);
@@ -102,6 +110,7 @@ export default {
       pageContents,
       setContentText,
       ABOUT_TEXT_KEY,
+      SUBMIT_TEXT_KEY,
       COPYRIGHT_TEXT_KEY,
       DISCLAIMER_TEXT_KEY,
       HOMESCREEN_TEXT_KEY,
