@@ -24,7 +24,7 @@
     </section>
     <section>
       <h2>Interpreting Your Results Text</h2>
-      <rich-editor v-model='pageContents.aboutText'/>
+      <rich-editor v-model='pageContents.interpretationText'/>
       <b-button label='Save' @click='setContentText(INTERPRETATION_TEXT_KEY, pageContents.interpretationText)'/>
     </section>
     <section>
