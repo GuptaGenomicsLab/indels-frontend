@@ -11,7 +11,6 @@ import {ABOUT_TEXT_KEY} from "@/scripts/ui";
 
 export default {
   name: 'SupportPage',
-  layout: 'authenticated',
   setup() {
     const axios = useAxios();
     const content = ref('Loading...');
