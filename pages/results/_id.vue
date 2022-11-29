@@ -95,16 +95,16 @@ export default {
       })
     }
 
-    const fetchData = async () => {
+    const fetchData = async (force = false) => {
       const query = await axios.$get(`/blast/query/${id.value}`)
+      if (force) return query;
       const { status } = query
       if (status === 'queued')
         result.header = 'Query is waiting to begin (queued).'
 
       if (status === 'queued' || status === 'ongoing') {
         await waitForCompletion()
-        location.reload() // good solution temporarily
-        return fetchData()
+        return fetchData(true)
       } else if (status === 'completed-nr' || status === 'null') {
         result.header = 'Query has no result or failed to complete.'
       } else {
