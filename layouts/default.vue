@@ -13,6 +13,51 @@
         <NuxtLink v-if='isLoggedIn' to='/submit'>Contribute</NuxtLink>
         <NuxtLink to='/support'>Support</NuxtLink>
       </div>
+
+      <div class='icons'>
+        <b-dropdown close-on-click append-to-body position='is-bottom-left'>
+          <template #trigger>
+            <b-icon v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)'  icon='cog-outline' size='sm' />
+          </template>
+
+          <b-dropdown-item custom>
+            <NuxtLink to='/csi'>
+              <b-icon icon='dna' size='md' />
+              Manage CSIs
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
+            <NuxtLink to='/user'>
+              <b-icon icon='account-box-multiple' size='md' />
+              Manage Users
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
+            <NuxtLink to='/import'>
+              <b-icon icon='database' size='md' />
+              Bulk Edit CSIs
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/results/all'>
+              <b-icon icon='table' size='md' />
+              View All Queries
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item>
+            <NuxtLink to='/bulk-query'>
+              <b-icon icon='stack-overflow' size='md' />
+              Bulk Query
+            </NuxtLink>
+          </b-dropdown-item>
+          <b-dropdown-item v-if='$store.$auth.user.role === "ADMIN"'>
+            <NuxtLink to='/site-settings'>
+              <b-icon icon='table' size='md' />
+              Site Settings
+            </NuxtLink>
+          </b-dropdown-item>
+        </b-dropdown>
+
       <div /> <!--      included for flexbox centering -->
     </nav>
     <Nuxt />

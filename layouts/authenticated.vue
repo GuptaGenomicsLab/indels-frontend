@@ -10,6 +10,7 @@
         <NuxtLink to='/query'>Query</NuxtLink>
         <NuxtLink to='/results'>Results</NuxtLink>
         <NuxtLink to='/support'>Support</NuxtLink>
+        <NuxtLink to='/about'>Scientific Background</NuxtLink>
         <NuxtLink to='/submit'>Contribute</NuxtLink>
       </div>
       <div class='icons'>
