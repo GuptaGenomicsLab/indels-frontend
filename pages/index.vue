@@ -4,7 +4,9 @@
       <LoginForm v-if='focusLogin' @switch='focusLogin = !focusLogin'/>
       <RegisterForm v-else @switch='focusLogin = !focusLogin'/>
     </section>
-    <section class='box-right' v-html='content'/>
+    <section class='box-right'>
+      <div class='content-box index-content'  v-html='content'/>
+    </section>
   </main>
 </template>
 
@@ -58,11 +60,10 @@ section.box-left {
 
 section.box-right {
   flex: 0.68;
-  height: 100vh;
+  height: 93vh;
   background: linear-gradient($primary, $primary-lighter);
-  color: $white;
   text-align: center;
-  padding: 5% 10px;
+  padding: 2% 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,5 +91,12 @@ figure.sample-image {
     font-size: 18px;
     font-family: Roboto, Arial, sans-serif;
   }
+}
+
+.index-content {
+  background: #D9EDF7;
+  color: #4c4c64;
+  border: 2px solid #98838F;
+  max-height: 90%;
 }
 </style>
