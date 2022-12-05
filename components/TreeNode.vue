@@ -20,9 +20,9 @@
             <span v-if='hit.csi.proteinName.length > 0'>in {{ hit.csi.proteinName }}</span>
           </span>
           <br><br>
-          Query:&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ hit.query }}</code>
+          Query:&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ hit.query.replaceAll(' ', '&nbsp;') }}</code>
           <br>
-          Subject:&nbsp;&nbsp;<code>{{ hit.subject }}</code>
+          Subject:&nbsp;&nbsp;<code>{{ hit.subject.replaceAll(' ', '&nbsp;') }}</code>
           <br><br>
           <i>Reference:</i> {{shortReference(hit.csi.reference)}}
         </div>

@@ -17,7 +17,7 @@
       <div class='icons'>
         <b-dropdown close-on-click append-to-body position='is-bottom-left'>
           <template #trigger>
-            <b-icon v-if='["ADMIN", "MANAGER"].includes($store.$auth.user.role)'  icon='cog-outline' size='sm' />
+            <b-icon v-if='["ADMIN", "MANAGER"].includes($store.$auth.user?.role)'  icon='cog-outline' size='sm' />
           </template>
 
           <b-dropdown-item custom>
@@ -57,6 +57,7 @@
             </NuxtLink>
           </b-dropdown-item>
         </b-dropdown>
+      </div>
 
       <div /> <!--      included for flexbox centering -->
     </nav>
