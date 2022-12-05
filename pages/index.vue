@@ -63,10 +63,30 @@ section.box-right {
   height: 93vh;
   background: linear-gradient($primary, $primary-lighter);
   text-align: center;
-  padding: 2% 10px;
+  padding: 0.5% 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  p {
+    text-align: justify;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px     rgba(0,0,0,0.5);
+  }
+
+
 }
 
 #content-paragraph {
@@ -97,6 +117,8 @@ figure.sample-image {
   background: #D9EDF7;
   color: #4c4c64;
   border: 2px solid #98838F;
-  max-height: 90%;
+  height: 94%;
+  margin: 0;
+  overflow-y: scroll;
 }
 </style>
