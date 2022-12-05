@@ -10,7 +10,7 @@
         <NuxtLink v-if='isLoggedIn' to='/query'>Query</NuxtLink>
         <NuxtLink v-if='isLoggedIn' to='/results'>Results</NuxtLink>
         <NuxtLink to='/about'>Scientific Background</NuxtLink>
-        <NuxtLink v-if='isLoggedIn' to='/submit'>Contribute</NuxtLink>
+<!--        <NuxtLink v-if='isLoggedIn' to='/submit'>Contribute</NuxtLink>-->
         <NuxtLink to='/support'>Support</NuxtLink>
       </div>
 
