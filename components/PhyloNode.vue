@@ -3,7 +3,7 @@
 
       <div class='card-header' role='button'>
         <span>{{ node.taxonName }}</span> &nbsp;
-        <span v-if='node.count > 0'>({{ node.count }})</span>
+        <span v-if='false && node.count > 0'>({{ node.count }})</span>
       </div>
 
     <TreeNode v-for='child of children' :key='child.taxonName' :tree='child' :clickable='false' />
