@@ -57,7 +57,7 @@ a {
     width: 100%;
   }
 
-  height: 30rem;
+  height: 12.5rem;
   margin: 2% 1rem;
   display: flex;
   flex-direction: column;
