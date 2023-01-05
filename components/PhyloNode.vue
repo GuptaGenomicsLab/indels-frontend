@@ -1,7 +1,7 @@
 <template>
   <div class='node-container'>
 
-      <div class='card-header' role='button'>
+      <div :class='node.count > 0 ? "card-header has-csis" : "card-header no-csis"' role='button'>
         <span>{{ node.taxonName }}</span> &nbsp;
         <span v-if='false && node.count > 0'>({{ node.count }})</span>
       </div>
@@ -77,7 +77,17 @@ export default {
   padding: .25rem 1rem;
   font-family: Consolas, monospace;
   border: 1px solid $primary;
+
 }
+
+  .no-csis {
+    opacity: 0.8;
+  }
+
+  .has-csis {
+    font-weight: 900;
+    border: 2px solid $primary;
+  }
 
 .card-header:hover {
   color: white;

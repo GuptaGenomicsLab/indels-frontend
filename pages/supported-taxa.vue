@@ -9,7 +9,11 @@
         The taxa currently supported by the AppIndels server are listed below.
         For more details, please see the our <NuxtLink to='/about'>Scientific Background</NuxtLink> page.
       </p>
-
+    <br>
+      <p>
+        Taxa that are bolded have 2 or more CSIs specific to them in the database.
+        Non-bolded taxa (which are parents to bolded taxa) are shown to provide phylogenetic/structural information but do not have CSIs in the database.
+      </p>
       <hr>
       <figure>
         <PhyloNode v-if='result !== null' :tree='result' :clickable='false' />
