@@ -15,9 +15,30 @@
         Non-bolded taxa (which are parents to bolded taxa) are shown to provide phylogenetic/structural information but do not have CSIs in the database.
       </p>
       <hr>
-      <figure>
-        <PhyloNode v-if='result !== null' :tree='result' :clickable='false' />
-      </figure>
+      <b-field>
+        <b-input placeholder="Search Taxa"
+                 type="search"
+                 icon="magnify"
+                 v-model="search"
+        />
+      </b-field>
+
+      <ul>
+        <li v-for='taxa of filtered()' :key='taxa'>
+          {{ taxa }}
+        </li>
+      </ul>
+
+
+      <hr>
+      <b-collapse>
+        <template #trigger="props">
+          <b-button label="View Taxa Hierarchically" type="is-primary" />
+          <figure>
+            <PhyloNode v-if='result !== null' :tree='result' :clickable='false' />
+          </figure>
+        </template>
+      </b-collapse>
 
     </section>
   </main>
@@ -37,6 +58,7 @@ export default {
     const axios = useAxios();
     const isLoading = ref(true)
     const result = ref(null)
+    const search = ref('');
 
     // fetch GET /supported-taxa
     async function fetchSupportedTaxa() {
@@ -47,9 +69,29 @@ export default {
 
     useLazyFetch(fetchSupportedTaxa)
 
+    const flatten = (node) => {
+      const taxa = [node.taxonName];
+      node.children.forEach(
+        (child) => [...taxa, ...flatten(child)]
+      )
+      return taxa;
+    }
+
+    const filtered = () => {
+      if (result.value === null) {
+        return []
+      }
+      return flatten(result.value)
+        .filter((taxa) => taxa.includes(search.value))
+        .sort((a, b) => a.localeCompare(b));
+    }
+
     return {
       isLoading,
-      result
+      result,
+      search,
+      flatten,
+      filtered
     }
   }
 }
