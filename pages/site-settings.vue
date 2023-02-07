@@ -23,9 +23,14 @@
       <b-button label='Save' @click='setContentText(ABOUT_TEXT_KEY, pageContents.aboutText)'/>
     </section>
     <section>
-      <h2>Interpreting Your Results Text</h2>
+      <h2>Interpreting Your Results Text (POSITIVE RESULT)</h2>
       <rich-editor v-model='pageContents.interpretationText'/>
       <b-button label='Save' @click='setContentText(INTERPRETATION_TEXT_KEY, pageContents.interpretationText)'/>
+    </section>
+    <section>
+      <h2>Interpreting Your Results Text (NEGATIVE RESULT)</h2>
+      <rich-editor v-model='pageContents.supportText'/>
+      <b-button label='Save' @click='setContentText(INTERPRETATION_TEXT_KEY_NEGATIVE, pageContents.interpretationTextNegative)'/>
     </section>
     <section>
       <h2>Submit CSI Info</h2>
@@ -52,6 +57,7 @@
       <rich-editor v-model='pageContents.supportText'/>
       <b-button label='Save' @click='setContentText(SUPPORT_TEXT_KEY, pageContents.supportText)'/>
     </section>
+
   </main>
 </template>
 
@@ -67,7 +73,8 @@ import {
   LOGIN_TEXT_KEY,
   PRIVACY_TEXT_KEY,
   SUPPORT_TEXT_KEY,
-  INTERPRETATION_TEXT_KEY
+  INTERPRETATION_TEXT_KEY,
+  INTERPRETATION_TEXT_KEY_NEGATIVE
 } from '@/scripts/ui'
 import RichEditor from "@/components/RichEditor";
 
@@ -88,7 +95,8 @@ export default {
       disclaimerText: '',
       privacyText: '',
       supportText: '',
-      interpretationText: ''
+      interpretationText: '',
+      interpretationTextNegative: ''
     });
 
     async function fetchContentText(pageContentsName, databaseKey) {
@@ -112,6 +120,7 @@ export default {
       fetchContentText('privacyText', PRIVACY_TEXT_KEY);
       fetchContentText('supportText', SUPPORT_TEXT_KEY);
       fetchContentText('interpretationText', INTERPRETATION_TEXT_KEY);
+      fetchContentText('interpretationTextNegative', INTERPRETATION_TEXT_KEY_NEGATIVE);
     })
 
     return {
@@ -125,7 +134,8 @@ export default {
       LOGIN_TEXT_KEY,
       PRIVACY_TEXT_KEY,
       SUPPORT_TEXT_KEY,
-      INTERPRETATION_TEXT_KEY
+      INTERPRETATION_TEXT_KEY,
+      INTERPRETATION_TEXT_KEY_NEGATIVE
     }
   }
 }
