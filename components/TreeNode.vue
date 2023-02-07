@@ -2,7 +2,7 @@
   <div class='node-container'>
     <b-collapse animation='fade' :open='false'>
       <template #trigger='props'>
-        <div class='card-header' role='button'>
+        <div class='card-header' role='button' v-if='node.taxonName !== "root"'>
           <span>{{ node.taxonName }}</span> &nbsp;
           <span v-if='node.specificHits.value.length > 0'>({{ node.specificHits.value.length }})</span>
           <b-icon v-if='node.specificHits.value.length > 0' :icon="props.open ? 'menu-up' : 'menu-down'" />
