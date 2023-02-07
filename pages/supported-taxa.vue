@@ -9,11 +9,11 @@
         The taxa currently supported by the AppIndels server are listed below.
         For more details, please see the our <NuxtLink to='/about'>Scientific Background</NuxtLink> page.
       </p>
-    <br>
       <p>
-        Taxa that are bolded have 2 or more CSIs specific to them in the database.
-        Non-bolded taxa (which are parents to bolded taxa) are shown to provide phylogenetic/structural information but do not have CSIs in the database.
+        See the below searchable list of taxa for which CSIs are present in our database.
+        Alternatively, scroll down to browse hierarchically.
       </p>
+    <br>
       <hr>
       <b-field>
         <b-input placeholder="Search Taxa"
@@ -24,20 +24,24 @@
       </b-field>
 
       <ul>
-        <li v-for='taxa of filtered()' :key='taxa'>
+        <li v-for='taxa of filtered' :key='taxa'>
           {{ taxa }}
         </li>
       </ul>
 
 
       <hr>
-      <b-collapse>
+      <b-collapse :open='open'>
         <template #trigger="props">
           <b-button label="View Taxa Hierarchically" type="is-primary" />
-          <figure>
-            <PhyloNode v-if='result !== null' :tree='result' :clickable='false' />
-          </figure>
         </template>
+        <p>
+          Taxa that are bolded have 2 or more CSIs specific to them in the database.
+          Non-bolded taxa (which are parents to bolded taxa) are shown to provide phylogenetic/structural information but do not have CSIs in the database.
+        </p>
+        <figure>
+          <PhyloNode v-if='result !== null' :tree='result' :clickable='false' />
+        </figure>
       </b-collapse>
 
     </section>
@@ -45,7 +49,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import {computed, ref} from 'vue';
 import { useAxios } from '@/scripts/useHooks'
 import PhyloNode from '@/components/PhyloNode'
 
@@ -58,40 +62,31 @@ export default {
     const axios = useAxios();
     const isLoading = ref(true)
     const result = ref(null)
+    const flatResult = ref(null);
     const search = ref('');
+    const open = ref(false);
 
     // fetch GET /supported-taxa
     async function fetchSupportedTaxa() {
       const data = await axios.$get('/csis/supported-taxa');
       result.value = data;
+
+      const flatData = await axios.$get('/csis/supported-taxa-linear');
+      flatResult.value = flatData;
       isLoading.value = false;
     }
 
     useLazyFetch(fetchSupportedTaxa)
 
-    const flatten = (node) => {
-      const taxa = [node.taxonName];
-      node.children.forEach(
-        (child) => [...taxa, ...flatten(child)]
-      )
-      return taxa;
-    }
-
-    const filtered = () => {
-      if (result.value === null) {
-        return []
-      }
-      return flatten(result.value)
-        .filter((taxa) => taxa.includes(search.value))
-        .sort((a, b) => a.localeCompare(b));
-    }
+    const filtered = computed(() => flatResult.value === null ? [] : flatResult.value.filter(taxa => taxa.toLowerCase().includes(search.value.toLowerCase())))
 
     return {
       isLoading,
       result,
       search,
-      flatten,
-      filtered
+      flatResult,
+      filtered,
+      open
     }
   }
 }
