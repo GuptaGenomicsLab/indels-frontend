@@ -53,7 +53,7 @@ import { computed, reactive, ref } from 'vue'
 import _ from 'lodash'
 import { useAxios } from '@/scripts/useHooks'
 import TreeNode from '@/components/TreeNode'
-import { copiedToClipboard, INTERPRETATION_TEXT_KEY } from '@/scripts/ui'
+import { copiedToClipboard, INTERPRETATION_TEXT_KEY, INTERPRETATION_TEXT_KEY_NEGATIVE } from '@/scripts/ui'
 
 
 const GENERAL_REFERENCES = [
@@ -76,7 +76,7 @@ export default {
       clinical: false
     })
     const isLoading = ref(false)
-    const interpretingResultsDropdown = ref(false);
+    const interpretingResultsDropdown = ref(true);
 
     const waitForCompletion = () => {
       return new Promise((resolve) => {
@@ -134,7 +134,8 @@ export default {
 
     const interpretingResultsContent = ref('Loading...');
     useLazyFetch(async () => {
-      const response = await axios.get(`/content/${INTERPRETATION_TEXT_KEY}`).catch(() => {})
+      const key = result.identified.includes('None') ? INTERPRETATION_TEXT_KEY_NEGATIVE : INTERPRETATION_TEXT_KEY;
+      const response = await axios.get(`/content/${key}`).catch(() => {})
       interpretingResultsContent.value = response.data.value ?? '<p>Not Found. Please contact the site administrator (kantered@mcmaster.ca) if this is an error.</p>';
     })
 
@@ -173,5 +174,10 @@ footer {
   padding: 5px;
   white-space: nowrap;
   overflow-x: scroll;
+}
+
+.interpreting-box {
+  border: 1px solid lightgray;
+  padding: 1rem;
 }
 </style>
