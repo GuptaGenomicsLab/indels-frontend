@@ -23,7 +23,7 @@
         />
       </b-field>
 
-      <ul>
+      <ul v-if='search.length >= 3 || filtered.length <= 5'>
         <li v-for='taxa of filtered' :key='taxa'>
           {{ taxa }}
         </li>
