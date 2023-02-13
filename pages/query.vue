@@ -52,7 +52,7 @@
             Restrict Query to Clinically Important CSIs Only
           </b-checkbox>
         </b-field>
-        <b-field label='Description' horizontal>
+        <b-field label='Description' horizontal style='display: none'>
           <b-input v-model='form.description' name='description' maxlength='64' />
         </b-field>
       </section>
