@@ -40,7 +40,7 @@
       <section v-if='showDetails' class='extra-options'>
         <hr style="margin-bottom: 3px;"/>
         <h2>Additional Options</h2>
-        <b-field label='Genome Type' horizontal>
+        <b-field label='Genome Type' horizontal style='display: none'>
           <b-select v-model='form.type'>
             <option value='Auto' selected>Auto</option>
             <option value='Protein'>Protein</option>
@@ -48,7 +48,7 @@
           </b-select>
         </b-field>
         <b-field label='Clinical' horizontal>
-          <b-checkbox v-model='form.clinicalOnly' type='is-info' disabled>
+          <b-checkbox v-model='form.clinicalOnly' type='is-info'>
             Restrict Query to Clinically Important CSIs Only
           </b-checkbox>
         </b-field>
@@ -70,7 +70,7 @@ export default {
   props: {
     showDetails: {
       type: Boolean,
-      default: false
+      default: true
     }
   },
   setup() {
