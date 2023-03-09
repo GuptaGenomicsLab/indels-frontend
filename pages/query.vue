@@ -12,7 +12,7 @@
     <form @submit.prevent='submit()'>
       <b-field :type='error.type' :message='error.message'>
         <b-upload v-model='file'
-                  accept='.faa,.fasta,.FAA,.FASTA'
+                  accept='.faa,.fasta,.FAA,.FASTA,.fna'
                   rounded
                   expanded
                   drag-drop
