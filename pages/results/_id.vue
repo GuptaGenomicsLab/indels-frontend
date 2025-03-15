@@ -57,8 +57,7 @@ import { copiedToClipboard, INTERPRETATION_TEXT_KEY, INTERPRETATION_TEXT_KEY_NEG
 
 
 const GENERAL_REFERENCES = [
-  'Gupta, R.S. (2014). Identification of conserved indels that are useful for classification and evolutionary studies. In Methods in Microbiology, M.Goodfellow, I.Sutcliffe, and J.Chun, eds. (Oxford: Academic Press), pp. 153-182.',
-  'Gupta, R.S. (2016). Impact of genomics on the understanding of microbial evolution and classification: the importance of Darwin\'s views on classification. FEMS Microbiol Rev. 40, 520-553.'
+  'Gupta, R. S., & Kanter-Eivin, D. A. (2023). AppIndels.com server: A web-based tool for the identification of known taxon-specific conserved signature indels in genome sequences. validation of its usefulness by predicting the taxonomic affiliation of &gt;700 unclassified strains of bacillus species. International Journal of Systematic and Evolutionary Microbiology, 73(5). https://doi.org/10.1099/ijsem.0.005844'
 ]
 
 export default {
